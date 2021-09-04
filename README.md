@@ -5,3 +5,7 @@ O tipo de operador bit a bit foi deixado de lado no momento.
 Na parte sobre o programa existem links para sites que foram utilizados como referência.
 
 Se houver Bugs reportem!
+
+V0.1 update:
+  Aadjailson me auxiliou com a organização e implementação de classes.
+  Corrigido alguns erros nos assuntos expostos.
