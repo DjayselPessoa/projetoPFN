@@ -5,6 +5,11 @@ O tipo de operador bit a bit foi deixado de lado no momento.
 Na parte sobre o programa existem links para sites que foram utilizados como referência.
 
 Se houver Bugs reportem!
+V0.2 update:
+ - Acesse o programa agora pelo arquivo Opening.py
+ - Necessário fazer cadastro de usuário
+ - Se já houver cadastro será perguntado o que fazer.
+ - Correção de assuntos
 
 V0.1 update:
   - Adjailson me auxiliou com a organização e implementação de classes.
