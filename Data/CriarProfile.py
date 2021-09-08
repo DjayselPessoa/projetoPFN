@@ -6,17 +6,16 @@ class CriarProfile:
     def criarprofile(self, alert):
         try:
             self.alert = alert
-            alert = self.alert
             fim = 0
             space = 0
-            novoScore = 0
-            novoCod = "#" + str(int(alert) + 1)
+            novoCod = "#" + str(int(self.alert) + 1)
+            novoScoreName = "score_"+novoCod+".csv"
             nomeTratado = str
             novoNome = str(input("Informe o primeiro nome -> "))
             novoNome = novoNome.lower()
-            print(novoNome)
+            # print(novoNome)
             for i in novoNome:
-                print("Ok")
+                # print("Ok")
                 if str(i) == " ":
                     space += 1
                     nomeTratado = nomeTratado + ""
@@ -25,7 +24,7 @@ class CriarProfile:
             else:
                 print("Nome recebido!")
                 nomeTratado = novoNome
-            novaSenha =  str(input("Informe a senha -  6 digitos somente números -> "))
+            novaSenha =  str(input("Informe a senha -  6 digitos somente de números -> "))
             if 6 <= len(novaSenha) <= 6:
                 for i in novaSenha:
                     if i in "0123456789":
@@ -35,7 +34,7 @@ class CriarProfile:
             else:
                 raise ValueError("ERRO DE COMPOSIÇÂO DE SENHA!")
 
-            data = [(novoCod), (nomeTratado), (novaSenha), (novoScore)]
+            data = [(novoCod), (nomeTratado), (novaSenha), (novoScoreName)]
             fim = ObjEscreverCSV.escrevercsv(data)
             if fim == 1:
                 raise ValueError("RETORNANDO!")
@@ -46,7 +45,7 @@ class CriarProfile:
             print("LOG -> ", e)
 
         finally:
-            return alert
+            return self.alert
 
 
 ObjCriarProfile = CriarProfile()
