@@ -3,7 +3,8 @@ from PacoteEscolha.AbrirBrowser import ObjAbrirBrowser
 
 class SobrePrograma:
 
-    def sobrePrograma(self):
+    def sobrePrograma(self, score):
+        self.score = score
         try:
             escolha = ""
             print("---------------------------------------------------------------------------------------------------")
@@ -28,7 +29,7 @@ class SobrePrograma:
             if escolha == "S" or escolha == "s":
                 ObjAbrirBrowser.abrirBrowser()
             elif escolha == "V" or escolha == "v":
-                return ""
+                return self.score
             else:
                 raise ValueError("Erro!")
         except ValueError as e:
