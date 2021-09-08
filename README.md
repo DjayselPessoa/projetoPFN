@@ -39,6 +39,9 @@ V0.1 update:
 
 
 
+![Image](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)
+
+
 -----------------------------------------------------------------------------------------------------------------English
 
 # PYTHON FOR NOOBS
@@ -79,3 +82,8 @@ V0.2 update:
 V0.1 update:
   - Adjailson assisted me with the organization and implementation of classes.
   - Fixed some errors in the subjects exposed.
+
+
+
+
+![Image](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)
