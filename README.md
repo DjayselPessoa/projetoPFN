@@ -1,5 +1,7 @@
 # PYTHON FOR NOOBS
 
+INICIE O PROGRAMA PELO ARQUIVO OPENING.PY!
+
 Este é um programa educativo que funciona pelo terminal com o intuito de explicar/ensinar sobre os operadores em Python para os iniciantes na linguagem.
 Vale ressaltar que o maior valor educativo desta ideia É O PRÓPRIO CÓDIGO DO PROGRAMA. Nada mais valioso para programação do que se acostumar com o código.
 É preciso dizer também que ficar melhorando este código é o que me anima, visto que tenho corrido atrás de ferramentas novas e documentação. Tenho conseguido aqui de forma 
