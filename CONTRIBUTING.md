@@ -15,7 +15,7 @@ Tenha certeza que sua alteração não impedirá a aplicação de executar suas 
 
 - pasta defEscolha contém a ponte entre a função main e o conteúdo
 
-- Opening.py é agora o arquivo inicial a ser executado.
+- Arquivo Inicio.py executa a aplicação
 
 
 
@@ -41,6 +41,8 @@ make sure that your change will not prevent the application from performing its 
 - Folder defEscolha contains the bridge between the main function and the contents
 
 - Opening.py is now the initial file to run.
+- t
+- The file Inicio.py starts the aplication
 
 
 
