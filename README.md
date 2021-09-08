@@ -1,6 +1,6 @@
 # PYTHON FOR NOOBS
 
-INICIE O PROGRAMA PELO ARQUIVO Opening.py!
+CORRIGIDO OS NOMES DOS ARQUIVOS! PARA INICIAR O PROGRAMA UTILIZE O ARQUIVO Inicio.py
 
 Este é um programa educativo que funciona pelo terminal com o intuito de explicar/ensinar sobre os operadores em Python para os iniciantes na linguagem.
 Vale ressaltar que o maior valor educativo desta ideia É O PRÓPRIO CÓDIGO DO PROGRAMA.
@@ -43,7 +43,7 @@ V0.1 update:
 
 # PYTHON FOR NOOBS
 
-START THE PROGRAM BY OPENING THE FILE Opening.py!
+FIXED FILE NAMES! TO START THE PROGRAM USE THE FILE Inicio.py
 
 This is an educational program that works through the terminal in order to explain/teach about Python operators for beginners in the language.
 It is noteworthy that the greatest educational value of this idea is THE PROGRAM CODE ITSELF.
