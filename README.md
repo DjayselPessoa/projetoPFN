@@ -58,7 +58,7 @@ V0.3 update:
 - Solved the score issue! =]
 - The program reads CSV, updates creating new lines below, generates new SCORE files. CSV for each profile created.
 - Changed a redundancy with the self parameters.
-- Correction of matters.
+- Correction of subjects.
 
 V0.2 update:
  - Access the program now from the file Opening.py
