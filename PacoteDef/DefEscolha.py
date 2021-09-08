@@ -9,40 +9,49 @@ from PacoteEscolha.OpLogico import ObjOpLogico
 
 class Escolha:
 
-    def escolha(self, escolhaOp):
+    def escolha(self, escolhaOp, score, cod):
         self.escolhaOp = escolhaOp
-        escolhaOp = self.escolhaOp
-        sair = "ok"
+        self.score = score
+        self.cod = cod
+        sair = "no"
         try:
-            if escolhaOp == "1":
-                ObjOpAritmetico.opAritmetico()
-                return ""
-            elif escolhaOp == "2":
-                ObjOpAtribuicao.opAtribuicao()
-                return ""
-            elif escolhaOp == "3":
-                ObjOpComparacao.opComparacao()
-                return ""
-            elif escolhaOp == "4":
-                ObjOpLogico.oplogico()
-                return ""
-            elif escolhaOp == "5":
-                ObjOpIdentidade.opIdentidade()
-                return ""
-            elif escolhaOp == "6":
-                ObjOpAssociacao.opAssociacao()
-                return ""
-            elif escolhaOp == "7":
-                ObjSobrePrograma.sobrePrograma()
-                return ""
-            elif escolhaOp == "8":
-                print("\nDesligando!")
-                return sair
+            if self.escolhaOp == "1":
+                self.score = ObjOpAritmetico.opAritmetico(self.score)
+                sair = "no"
+                return sair, self.score, self.cod
+            elif self.escolhaOp == "2":
+                self.score = ObjOpAtribuicao.opAtribuicao(self.score)
+                sair = "no"
+                return sair, self.score, self.cod
+            elif self.escolhaOp == "3":
+                self.score = ObjOpComparacao.opComparacao(self.score)
+                sair = "no"
+                return sair, self.score, self.cod
+            elif self.escolhaOp == "4":
+                self.score = ObjOpLogico.oplogico(self.score)
+                sair = "no"
+                return sair, self.score, self.cod
+            elif self.escolhaOp == "5":
+                self.score = ObjOpIdentidade.opIdentidade(self.score)
+                sair = "no"
+                return sair, self.score, self.cod
+            elif self.escolhaOp == "6":
+                self.score = ObjOpAssociacao.opAssociacao(self.score)
+                sair = "no"
+                return sair, self.score, self.cod
+            elif self.escolhaOp == "7":
+                self.score = ObjSobrePrograma.sobrePrograma(self.score)
+                sair = "no"
+                return sair, self.score, self.cod
+            elif self.escolhaOp == "8":
+                print("\nSAINDO")
+                sair = "ok"
+                return sair, self.score, self.cod
             else:
-                raise ValueError("\nInformação incorreta!")
+                raise ValueError("\nDADO INCORRETO!")
 
         except ValueError as e:
-            print("\nopção inexistente -", e)
+            print("\nLOG -> ", e)
 
 
 ObjEscolha = Escolha()
