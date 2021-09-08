@@ -7,16 +7,28 @@ class AbrirCSV:
         cod = []
         nome = []
         senha = []
-        score = []
+        scorename = []
 
         for d in csv.DictReader(open('PYTHON\projetos\PFNoobs\Opening\Data\SAVE.csv'), delimiter=','):
             cod.append(d["COD"])
             nome.append(d["NOME"])
             senha.append(d["SENHA"])
-            score.append(d["SCORE"])
+            scorename.append(d["SCORENAME"])
 
-        alert = len(cod)
-        return alert, cod, nome, senha, score
+        alertCod = len(cod)
+        return alertCod, cod, nome, senha, scorename
+
+    def abrirScore(self, alertscore):
+        self.alertscore = alertscore
+        scoreList = []
+        novoCod = "#"+str(self.alertscore)
+        novoCodNameFile = '_'+novoCod+'.csv'
+        novoPath = 'PYTHON\projetos\PFNoobs\Opening\Data\score'+novoCodNameFile
+        for d1 in csv.DictReader(open(novoPath), delimiter=','):
+            scoreList.append(d1["SCORE"])
+
+        return scoreList
 
 
 ObjAbrirCSV = AbrirCSV()
+ObjAbrirSCORE = AbrirCSV()
