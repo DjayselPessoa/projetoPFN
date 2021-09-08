@@ -7,6 +7,14 @@ from Data.UpdateScore import ObjUpdateScore
 from csv import writer
 from csv import QUOTE_MINIMAL
 
+'''
+PROGRAMADO: DJAYSEL PESSÔA
+
+PYTHON FOR NOOBS - VISA ATENDER AS NECESSIDADES DE INDIVÍDUOS QUE AINDA ESTÃO EM PROCESSO DE APRENDIZAGEM! SEJA COM A EXECUÇÃO DO PROGRAMA EM SI COMO O ESTUDO DO CÓDIGO.
+
+COMENTEM SOBRE!
+'''
+
 active = True
 
 while active:
