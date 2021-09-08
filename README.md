@@ -1,12 +1,11 @@
 # PYTHON FOR NOOBS
 
-INICIE O PROGRAMA PELO ARQUIVO OPENING.PY!
+INICIE O PROGRAMA PELO ARQUIVO Opening.py!
 
 Este é um programa educativo que funciona pelo terminal com o intuito de explicar/ensinar sobre os operadores em Python para os iniciantes na linguagem.
-Vale ressaltar que o maior valor educativo desta ideia É O PRÓPRIO CÓDIGO DO PROGRAMA. Nada mais valioso para programação do que se acostumar com o código.
-É preciso dizer também que ficar melhorando este código é o que me anima, visto que tenho corrido atrás de ferramentas novas e documentação. Tenho conseguido aqui de forma 
-simples obter um retorno real do código; Ver um resultado é sempre prazeroso.
-O tipo de operador bit a bit foi deixado de lado no momento.
+Vale ressaltar que o maior valor educativo desta ideia É O PRÓPRIO CÓDIGO DO PROGRAMA.
+O objetivo aqui é tornar essa aplicação sempre mais robusta e limpa, o que me faz ir atrás de ferramentas novas e documentação. Ver resultado é sempre animador.
+O tipo de operador 'bit a bit' foi deixado de lado no momento.
 Na parte sobre o programa dentro da execução do programa existem links para sites que foram utilizados como referência QUE ABRIRÃO SEU NAVEGADOR! 
 
 NENHUM LINK É NOCIVO, MAS VERIFIQUE MESMO ASSIM!
@@ -34,3 +33,39 @@ V0.1 update:
   - Corrigido alguns erros nos assuntos expostos.
 
 
+
+-----------------------------------------------------------------------------------------------------------------English
+
+# PYTHON FOR NOOBS
+
+START THE PROGRAM BY OPENING THE FILE Opening.py!
+
+This is an educational program that works through the terminal in order to explain/teach about Python operators for beginners in the language.
+It is noteworthy that the greatest educational value of this idea is THE PROGRAM CODE ITSELF.
+The goal here is to make this application ever more robust and cleaner, which makes me go after new tools and documentation. Seeing results is always encouraging.
+The bitwise operator type has been left out at this time.
+In the part about the program within the program execution there are links to sites that were used as a reference THAT WILL OPEN YOUR BROWSER! 
+
+NO LINK IS HARMFUL, BUT CHECK ANYWAY!
+
+IMPORTANT:
+- The initial SAVE.csv must contain a line with the Labels: COD,NOME,SENHA,SCORENAME plus a blank line below. 
+- That's the only way to make the program always write below the last line and not on the last line!
+
+If there are Bugs report!
+
+V0.3 update:
+- Solved the score issue! =]
+- The program reads CSV, updates creating new lines below, generates new SCORE files. CSV for each profile created.
+- Changed a redundancy with the self parameters.
+- Correction of matters.
+
+V0.2 update:
+ - Access the program now from the file Opening.py
+ - Necessary to register user
+ - If there is already a record, you will be asked what to do.
+ - Correction of subjects
+
+V0.1 update:
+  - Adjailson assisted me with the organization and implementation of classes.
+  - Fixed some errors in the subjects exposed.
