@@ -12,7 +12,7 @@ class AbrirBrowser:
         webbrowser.open("http://cristiancechinel.pro.br/my_files/algorithms/bookhtml/node39.html")
         webbrowser.open("https://isolution.pro/pt/t/python3/python-basic-operators/python-3-operadores-basicos")
         webbrowser.open("https://www.devmedia.com.br/operadores-no-python/40693")
-        return ""
+        return
 
 
 ObjAbrirBrowser = AbrirBrowser()
