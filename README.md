@@ -11,6 +11,10 @@ Na parte sobre o programa dentro da execução do programa existem links para si
 
 NENHUM LINK É NOCIVO, MAS VERIFIQUE MESMO ASSIM!
 
+IMPORTANTE:
+- O arquivo inicial SAVE.csv deve conter uma linha com as Labels: COD,NOME,SENHA,SCORENAME mais uma linha em branco abaixo. 
+- Essa é a única forma de fazer o programa escrever sempre abaixo da última linha e não na última linha!
+
 Se houver Bugs reportem!
 
 V0.3 update:
