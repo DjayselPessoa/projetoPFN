@@ -6,11 +6,10 @@ class EscreverCSV:
 
     def escrevercsv(self, data):
         self.data = data
-        data = self.data
         fim = 0
 
         with open('PYTHON\projetos\PFNoobs\Opening\Data\SAVE.csv', 'a+', newline='') as escreverFile:
-            print("Salvando data: -> ", data)
+            print("Salvando data: -> ", self.data)
             d2 = writer(escreverFile)
             d2.writerow(data)
         escreverFile.close()
