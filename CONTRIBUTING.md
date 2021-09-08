@@ -18,6 +18,11 @@ Tenha certeza que sua alteração não impedirá a aplicação de executar suas 
 - Opening.py é agora o arquivo inicial a ser executado.
 
 
+
+
+![Image](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)
+
+
 ---------------------------------------------------------------------------------------------------------------------English
 
 The goal is to educate, then educate!
@@ -36,4 +41,9 @@ make sure that your change will not prevent the application from performing its 
 - Folder defEscolha contains the bridge between the main function and the contents
 
 - Opening.py is now the initial file to run.
+
+
+
+
+![Image](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)
 
