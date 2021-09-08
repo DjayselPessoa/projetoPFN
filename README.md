@@ -10,6 +10,11 @@ Na parte sobre o programa dentro da execução do programa existem links para si
 
 NENHUM LINK É NOCIVO, MAS VERIFIQUE MESMO ASSIM!
 
+COMO USAR:
+- as opções em sua maioria são os números no começo de cada opção
+- para Entrar, Criar e Sair utilize a primeira letra de cada palavra
+- para opções 'A' e 'B' utilize 'a' e 'b'
+
 IMPORTANTE:
 - O arquivo inicial SAVE.csv deve conter uma linha com as Labels: COD,NOME,SENHA,SCORENAME mais uma linha em branco abaixo. 
 - Essa é a única forma de fazer o programa escrever sempre abaixo da última linha e não na última linha!
@@ -47,6 +52,11 @@ The bitwise operator type has been left out at this time.
 In the part about the program within the program execution there are links to sites that were used as a reference THAT WILL OPEN YOUR BROWSER! 
 
 NO LINK IS HARMFUL, BUT CHECK ANYWAY!
+
+HOW TO USE:
+- the options mostly are the numbers at the beginning of each option
+- to Entrar, Criar and Sair use the first letter of each word ( e, c, s )
+- for options 'A' and 'B' use 'a' and 'b'
 
 IMPORTANT:
 - The initial SAVE.csv must contain a line with the Labels: COD,NOME,SENHA,SCORENAME plus a blank line below. 
