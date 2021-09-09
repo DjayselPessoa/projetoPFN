@@ -11,7 +11,6 @@ class LayerMain:
         sair = "no"
         escolhaOp = str
 
-
         while active:
             try:
                 escolhaOp = str
