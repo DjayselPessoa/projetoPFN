@@ -1,10 +1,10 @@
 from Core.EscreverCSV import ObjEscreverCSV
-from Core.AbrirCSV import ObjAbrirCSV
 
 
 class CriarProfile:
-    def criarprofile(self, alert):
+    def criarprofile(self, alert, pegarDirRaiz):
         try:
+            self.pegarDirRaiz = pegarDirRaiz
             self.alert = alert
             fim = 0
             space = 0
@@ -35,7 +35,7 @@ class CriarProfile:
                 raise ValueError("ERRO DE COMPOSIÇÂO DE SENHA!")
 
             data = [(novoCod), (nomeTratado), (novaSenha), (novoScoreName)]
-            fim = ObjEscreverCSV.escrevercsv(data)
+            fim = ObjEscreverCSV.escrevercsv(data, pegarDirRaiz)
             if fim == 1:
                 raise ValueError("RETORNANDO!")
             else:
