@@ -21,7 +21,7 @@ IMPORTANTE:
 
 Se houver Bugs reportem!
 
-V0.4 09/09/2021:
+V0.4 update -> 09/09/2021:
 - Resolvido um problema com subdiretórios e pastas! Agora o processo começa no arquivo Inicio.py obtendo o Path através do import os -> pegarDirRaiz = str(os.getcwd())
 - Ainda existe uma dúvida quanto a rodar no MACOS e LINUX
 
@@ -71,7 +71,7 @@ IMPORTANT:
 
 If there are Bugs report!
 
-V0.4 09/09/2021:
+V0.4 update -> 09/09/2021:
 - Solved an issue with subdirectories and folders! Now the process starts in the Inicio.py getting the Path by: import os -> pegarDirRaiz = str(os.getcwd())
 - There is still a doubt about running on MACOS and LINUX
 
