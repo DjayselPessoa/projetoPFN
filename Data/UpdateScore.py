@@ -1,20 +1,28 @@
 import csv
 from csv import writer
+from pathlib import Path
+from pathlib import PureWindowsPath
 
 
 class UpdateScore:
 
-    def updatescore(self, score, cod, active):
+    def updatescore(self, score, cod, active, pegarDirRaiz):
+        self.pegarDirRaiz = pegarDirRaiz
         self.score = score
         self.cod = cod
         self.active = active
 
-        nomePath = str(cod)
-        createNamePath = "PYTHON\projetos\PFNoobs\Opening\Data\score_"+nomePath+".csv"
+        novoCod = str(cod)
+
+        nomeArquivoSCORE = "score_"+novoCod+".csv"
+        pathTratado = str(self.pegarDirRaiz)
+        home = Path(pathTratado)
+        sourcePath = Path(home, "Data", nomeArquivoSCORE)
+
         # print(self.score)
         data = [(self.score)]
 
-        with open(createNamePath, "a+", newline='') as escreverFile:
+        with open(sourcePath, "a+", newline='') as escreverFile:
             d2 = writer(escreverFile)
             d2.writerow(data)
             print("Salvando SCORE: -> ", data)
