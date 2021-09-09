@@ -1,5 +1,4 @@
 from pathlib import Path
-from pathlib import PureWindowsPath
 import csv
 
 
