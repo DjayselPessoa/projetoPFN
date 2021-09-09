@@ -1,14 +1,19 @@
 import csv
 from csv import writer
+from pathlib import Path
+from pathlib import PureWindowsPath
 
 
 class EscreverCSV:
 
-    def escrevercsv(self, data):
+    def escrevercsv(self, data, pegarDirRaiz):
+        self.pegarDirRaiz = pegarDirRaiz
         self.data = data
         fim = 0
-
-        with open('PYTHON\projetos\PFNoobs\Opening\Data\SAVE.csv', 'a+', newline='') as escreverFile:
+        pathTratado = str(self.pegarDirRaiz)
+        home = Path(pathTratado)
+        sourcePath = Path(home, "Data", "SAVE.csv")
+        with open(sourcePath, 'a+', newline='') as escreverFile:
             print("Salvando data: -> ", self.data)
             d2 = writer(escreverFile)
             d2.writerow(data)
