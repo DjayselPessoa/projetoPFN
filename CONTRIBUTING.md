@@ -1,6 +1,6 @@
 Contribution Guidelines: ->
 
-O objetivo é educar, então eduque!
+O objetivo é educar, então eduque...
 
 Seja didático, claro e conciso
 
@@ -25,7 +25,7 @@ Tenha certeza que sua alteração não impedirá a aplicação de executar suas 
 
 ---------------------------------------------------------------------------------------------------------------------English
 
-The goal is to educate, then educate!
+The goal is to educate
 
 Be didactic, clear and concise
 
