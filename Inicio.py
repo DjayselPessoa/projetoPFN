@@ -45,11 +45,11 @@ while active:
             csvfile.close()
 
         elif len(cod) != 0 or alert == 1:
-            print("Bem vindo ao PYTHON FOR NOOBS!\nUtilize as letras iniciais para acessar: ->")
+            print("\nBem vindo ao PYTHON FOR NOOBS!\nUtilize as letras iniciais para acessar: ->")
             entrarCriar = (str(input("Entrar - Criar - Sair -> "))).lower()
 
         if entrarCriar in "criar":
-            print("Iniciando Criação: -> ")
+            print("\nIniciando Criação: -> ")
             alert = ObjCriarProfile.criarprofile(alert, pegarDirRaiz)
             novoCod = "#"+str(alert + 1)
             novoScore = 0
@@ -65,12 +65,12 @@ while active:
                 filewriter.writerow([novoScore])
             csvfile.close()
 
-            raise ValueError("REINICIANDO!")
+            raise ValueError("\nREINICIANDO!")
 
         elif entrarCriar in "entrar":
             confirmar, position = ObjEntrar.entrar(nome, senha)
             if confirmar == 1:
-                print("Sua entrada foi permitida! Seja bem vindo!")
+                print(f"\nSua entrada foi permitida! Bem vindo {nome[position]}")
                 nomeUser = nome[position]
                 # print(nomeUser)
                 scoreUser = ObjAbrirSCORE.abrirScore(alert, pegarDirRaiz)
@@ -83,19 +83,17 @@ while active:
                 # print(scoreUserFinal)
                 if active == False:
                     active = ObjUpdateScore.updatescore(scoreUserFinal, codUserFinal, active, pegarDirRaiz)
-                    raise ValueError("SAINDO!")
+                    raise ValueError("\nSAINDO!")
             elif confirmar == 0:
-                raise ValueError("LOADING -> ")
+                raise ValueError("\nLOADING -> ")
 
         elif entrarCriar in "sair":
-            print("Seus dados estão salvos!")
+            print("\nSeus dados estão salvos!")
 
             active = False
-            raise ValueError("DESLIGANDO!")
-        else:
-            raise ValueError("DADO INCORRETO! REINICIANDO")
+            raise ValueError("\nDESLIGANDO!")
 
     except ValueError as e:
-        raise ValueError("LOG: ->", e)
+        raise ValueError("\nLOG: ->", e)
     finally:
         continue
