@@ -91,6 +91,8 @@ while active:
 
             active = False
             raise ValueError("DESLIGANDO!")
+        else:
+            raise ValueError("DADO INCORRETO! REINICIANDO")
 
     except ValueError as e:
         raise ValueError("LOG: ->", e)
