@@ -47,5 +47,5 @@ class AbrirCSV:
         return scoreList
 
 
-ObjAbrirCSV = AbrirCSV()
-ObjAbrirSCORE = AbrirCSV()
+ObjAbrirCSV = AbrirCSV() # Segundo Obj foi criado somente para explicitar intenção! Os dois métodos podem ser acessados pelos dois Obj!
+ObjAbrirSCORE = AbrirCSV() # The second Obj was made to make the goal clearer! The two methods can be accessed by the two objects!
