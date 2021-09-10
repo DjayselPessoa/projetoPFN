@@ -70,7 +70,8 @@ while active:
         elif entrarCriar in "entrar":
             confirmar, position = ObjEntrar.entrar(nome, senha)
             if confirmar == 1:
-                print(f"\nSua entrada foi permitida! Bem vindo {nome[position]}")
+                showName = nome[position].capitalize()
+                print(f"\nSua entrada foi permitida! Bem vindo {showName}!\n")
                 nomeUser = nome[position]
                 # print(nomeUser)
                 scoreUser = ObjAbrirSCORE.abrirScore(alert, pegarDirRaiz)
