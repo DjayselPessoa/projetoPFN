@@ -1,7 +1,6 @@
 import csv
 from csv import writer
 from pathlib import Path
-from pathlib import PureWindowsPath
 
 
 class EscreverCSV:
