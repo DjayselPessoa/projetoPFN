@@ -1,7 +1,10 @@
 import csv
 from pathlib import Path
-from pathlib import PureWindowsPath
 
+'''
+    Essa classe virou um método dentro do arquivo AbrirCSV.py
+    This class has become a method within the AbrirCSV.py
+'''
 
 class LerScore:
 
