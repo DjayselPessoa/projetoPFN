@@ -24,6 +24,7 @@ Se houver Bugs reportem!
 v0.5 update -> 10/09/2021:
 - Corrigido a falta de tratamento numa entrada que causava o término do processo e em perca de score.
 - removido código morto
+- Alterada a posição da maioria do texto exibido
 
 V0.4 update -> 09/09/2021:
 - Resolvido um problema com subdiretórios e pastas! Agora o processo começa no arquivo Inicio.py obtendo o Path através do import os -> pegarDirRaiz = str(os.getcwd())
@@ -78,6 +79,7 @@ If there are Bugs report!
 v0.5 update -> 10/09/2021:
 - Fixed the lack of treatment in an entry that caused the end of the process and in loss of score.
 - removed dead code
+- Changed the position of most of the displayed text
 
 V0.4 update -> 09/09/2021:
 - Solved an issue with subdirectories and folders! Now the process starts in the Inicio.py getting the Path by: import os -> pegarDirRaiz = str(os.getcwd())
