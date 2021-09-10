@@ -21,6 +21,10 @@ IMPORTANTE:
 
 Se houver Bugs reportem!
 
+v0.5 update -> 10/09/2021:
+- Corrigido a falta de tratamento numa entrada que causava o término do processo e em perca de score.
+- removido código morto
+
 V0.4 update -> 09/09/2021:
 - Resolvido um problema com subdiretórios e pastas! Agora o processo começa no arquivo Inicio.py obtendo o Path através do import os -> pegarDirRaiz = str(os.getcwd())
 - Ainda existe uma dúvida quanto a rodar no MACOS e LINUX
@@ -70,6 +74,10 @@ IMPORTANT:
 - That's the only way to make the program always write below the last line and not on the last line!
 
 If there are Bugs report!
+
+v0.5 update -> 10/09/2021:
+- Fixed the lack of treatment in an entry that caused the end of the process and in loss of score.
+- removed dead code
 
 V0.4 update -> 09/09/2021:
 - Solved an issue with subdirectories and folders! Now the process starts in the Inicio.py getting the Path by: import os -> pegarDirRaiz = str(os.getcwd())
