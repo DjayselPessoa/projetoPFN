@@ -1,6 +1,6 @@
 Contribution Guidelines: ->
 
-O objetivo é educar, então eduque...
+O objetivo é educar.
 
 Seja didático, claro e conciso
 
