@@ -127,7 +127,7 @@ class OpComparacao:
                     raise ValueError("\nDADO INCORRETO!")
 
             except ValueError as e:
-                print("\n", e)
+                print(e)
 
 
 ObjOpComparacao = OpComparacao()
