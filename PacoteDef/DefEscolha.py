@@ -47,8 +47,6 @@ class Escolha:
                 print("\nSAINDO")
                 sair = "ok"
                 return sair, self.score, self.cod
-            else:
-                raise ValueError("\nDADO INCORRETO!")
 
         except ValueError as e:
             print("\nLOG -> ", e)
