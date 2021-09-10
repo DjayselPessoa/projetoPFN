@@ -17,7 +17,7 @@ class Entrar:
                         if i2 == " ":
                             raise ValueError("Não utilize espaço em branco! - REINICIANDO!")
                         if cont1 == len(entradaNome):
-                            print("CHECK!")
+                            print("CHECKED!")
                             first = False
                             break
 
