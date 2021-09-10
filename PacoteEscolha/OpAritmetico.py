@@ -76,7 +76,7 @@ class OpAritmetico:
                     raise ValueError("\nDADO INCORRETO!")
 
             except ValueError as e:
-                print("\n", e)
+                print(e)
 
 
 ObjOpAritmetico = OpAritmetico()
