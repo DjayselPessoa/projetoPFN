@@ -45,6 +45,7 @@ while active:
             csvfile.close()
 
         elif len(cod) != 0 or alert == 1:
+            print("Bem vindo ao PYTHON FOR NOOBS!\nUtilize as letras iniciais para acessar: ->")
             entrarCriar = (str(input("Entrar - Criar - Sair -> "))).lower()
 
         if entrarCriar in "criar":
