@@ -12,7 +12,7 @@ class UpdateScore:
         self.cod = cod
         self.active = active
 
-        novoCod = str(cod)
+        novoCod = str(self.cod)
 
         nomeArquivoSCORE = "score_"+novoCod+".csv"
         pathTratado = str(self.pegarDirRaiz)
