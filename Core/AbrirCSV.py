@@ -11,7 +11,6 @@ class AbrirCSV:
         senha = []
         scorename = []
 
-        # PYTHON\projetos\PFNoobs\Data\SAVE.csv
         pathTratado = str(self.pegarDirRaiz)
         home = Path(pathTratado)
         sourcePath = Path(home, "Data", "SAVE.csv")
