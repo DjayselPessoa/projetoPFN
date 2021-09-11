@@ -74,7 +74,7 @@ while active:
                 print(f"\nSua entrada foi permitida! Bem vindo {showName}!\n")
                 nomeUser = nome[position]
                 # print(nomeUser)
-                scoreUser = ObjAbrirSCORE.abrirScore(alert, pegarDirRaiz)
+                scoreUser = ObjAbrirSCORE.abrirScore(pegarDirRaiz, position, cod)
                 positionScore = len(scoreUser) - 1
                 scoreLido = int(scoreUser[positionScore])
                 # print(scoreLido)
