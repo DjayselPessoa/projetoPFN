@@ -21,6 +21,11 @@ IMPORTANTE:
 
 Se houver Bugs reportem!
 
+v0.6 update -> 11/09/2021
+- Corrigido um tratamento durante o teste de senha que poderia confundir o usuário
+- Corrigido o código usado para abrir o score, dependendo do ocorrido poderia não ler o score correto
+- Removido código morto
+
 v0.5 update -> 10/09/2021:
 - Corrigido a falta de tratamento numa entrada que causava o término do processo e em perca de score.
 - removido código morto
@@ -75,6 +80,11 @@ IMPORTANT:
 - That's the only way to make the program always write below the last line and not on the last line!
 
 If there are Bugs report!
+
+v0.6 update -> 11/09/2021
+- Fixed a treatment during password testing that could confuse the user
+- Fixed the code used to open the score, depending on what happened might not read the correct score
+- Removed dead code
 
 v0.5 update -> 10/09/2021:
 - Fixed the lack of treatment in an entry that caused the end of the process and in loss of score.
