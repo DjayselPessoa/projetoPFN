@@ -46,6 +46,6 @@ class AbrirCSV:
 
         return scoreList
 
-
+# não há motivo pra se fazer o que fiz abaixo, além de deixar claro o que está procurando logo pelo nome do OBJ. 
 ObjAbrirCSV = AbrirCSV()
 ObjAbrirSCORE = AbrirCSV()
