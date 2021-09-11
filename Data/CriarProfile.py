@@ -18,9 +18,9 @@ class CriarProfile:
                 # print("Ok")
                 if str(i) == " ":
                     space += 1
-                    nomeTratado = nomeTratado + ""
-                if space > 1 and len(nomeTratado) > 0:
-                    raise ValueError("Informe somente o primeiro nome - >")
+                    # nomeTratado = nomeTratado + ""
+                if space > 1:
+                    raise ValueError("Iforme o nome sem usar espaço - REINICIANDO!")
             else:
                 print("Nome recebido!")
                 nomeTratado = novoNome
