@@ -29,11 +29,12 @@ class AbrirCSV:
         # print("type -> ", type(len(cod)))
         return alertCod, cod, nome, senha, scorename
 
-    def abrirScore(self, alertscore, pegarDirRaiz):
-        self.alertscore = alertscore
+    def abrirScore(self, pegarDirRaiz, position, cod):
         self.pegarDirRaiz = pegarDirRaiz
+        self.position = position
+        self.cod = cod
         scoreList = []
-        novoCod = "#"+str(self.alertscore)
+        novoCod = self.cod[self.position]
         nomeArquivoSCORE = "score_"+novoCod+".csv"
 
         pathTratado = str(self.pegarDirRaiz)
@@ -47,5 +48,5 @@ class AbrirCSV:
         return scoreList
 
 
-ObjAbrirCSV = AbrirCSV() # Segundo Obj foi criado somente para explicitar intenção! Os dois métodos podem ser acessados pelos dois Obj!
-ObjAbrirSCORE = AbrirCSV() # The second Obj was made to make the goal clearer! The two methods can be accessed by the two objects!
+ObjAbrirCSV = AbrirCSV()
+ObjAbrirSCORE = AbrirCSV()
