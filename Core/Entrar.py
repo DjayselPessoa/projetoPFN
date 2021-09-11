@@ -28,6 +28,8 @@ class Entrar:
                         status = 1
                         position = cont - 1
                         return status, position
+                    else:
+                        raise ValueError("SENHA INCORRETA - REINICIANDO!")
 
             else:
                 if cont == len(nome) and status == 0:
