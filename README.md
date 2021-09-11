@@ -21,7 +21,7 @@ IMPORTANTE:
 
 Se houver Bugs reportem!
 
-v0.6 update -> 11/09/2021
+v0.6 update -> 11/09/2021:
 - Corrigido um tratamento durante o teste de senha que poderia confundir o usuário
 - Corrigido o código usado para abrir o score, dependendo do ocorrido poderia não ler o score correto
 - Removido código morto
@@ -81,7 +81,7 @@ IMPORTANT:
 
 If there are Bugs report!
 
-v0.6 update -> 11/09/2021
+v0.6 update -> 11/09/2021:
 - Fixed a treatment during password testing that could confuse the user
 - Fixed the code used to open the score, depending on what happened might not read the correct score
 - Removed dead code
