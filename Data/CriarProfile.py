@@ -24,7 +24,7 @@ class CriarProfile:
             else:
                 print("Nome recebido!")
                 nomeTratado = novoNome
-            novaSenha =  str(input("Informe a senha -  6 digitos somente de números -> "))
+            novaSenha = str(input("Informe a senha -  6 digitos somente de números -> "))
             if 6 <= len(novaSenha) <= 6:
                 for i in novaSenha:
                     if i in "0123456789":
