@@ -1,4 +1,4 @@
-# PYTHON FOR NOOBS - [EN-US](https://github.com/DjayselPessoa/projetoPFN#python-for-noobs-1)
+# PYTHON FOR NOOBS - [EN-US](https://github.com/DjayselPessoa/projetoPFN/blob/main/README.md#python-for-noobs)
 
 CORRIGIDO OS NOMES DOS ARQUIVOS! PARA INICIAR O PROGRAMA UTILIZE O ARQUIVO Inicio.py
 
