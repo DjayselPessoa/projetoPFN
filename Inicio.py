@@ -45,8 +45,11 @@ while active:
             csvfile.close()
 
         elif len(cod) != 0 or alert == 1:
-            print("\nBem vindo ao PYTHON FOR NOOBS!\nUtilize as letras iniciais para acessar: ->")
-            entrarCriar = (str(input("Entrar - Criar - Sair -> "))).lower()
+            print("\nBem vindo ao PYTHON FOR NOOBS!\n\nUtilize as letras iniciais para acessar: ->\n")
+            listaExibir = ["Entrar", "Criar", "Sair", "[E]", "[C]", "[S]"]
+            for i in range(3):
+                print("{:<7s}{:^7s}".format(listaExibir[i], listaExibir[i+3]))
+            entrarCriar = (str(input(": -> "))).lower()
 
         if entrarCriar in "criar":
             print("\nIniciando Criação: -> ")
