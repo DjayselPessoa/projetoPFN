@@ -92,7 +92,7 @@ while active:
                 raise ValueError("\nLOADING -> ")
 
         elif entrarCriar in "sair":
-            print("\nSeus dados estão salvos!")
+            print("\nFINALIZANDO APLICAÇÃO!")
 
             active = False
             raise ValueError("\nDESLIGANDO!")
