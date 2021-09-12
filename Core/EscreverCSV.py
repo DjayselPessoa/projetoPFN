@@ -13,7 +13,8 @@ class EscreverCSV:
         home = Path(pathTratado)
         sourcePath = Path(home, "Data", "SAVE.csv")
         with open(sourcePath, 'a+', newline='') as escreverFile:
-            print("Salvando data: -> ", self.data)
+            print("Salvando DATA: -> {:<5s} -{:^5s}- {:^15s}".format("NOME", "ID", "SCOREFILE"))
+            print("Salvando DATA: -> {:<5s} -{:^5s}- {:^15s}".format(self.data[1], self.data[0], self.data[3]))
             d2 = writer(escreverFile)
             d2.writerow(data)
         escreverFile.close()
