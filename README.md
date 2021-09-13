@@ -125,3 +125,5 @@ V0.1 update:
 
 
 ![Image](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)
+
+![QR](https://github.com/DjayselPessoa/projetoPFN/blob/main/qrcode_github.com.png)
