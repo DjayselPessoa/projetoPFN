@@ -129,4 +129,4 @@ V0.1 update:
 -----------------------------------------------------------------------------------------------------------------QRCODE to HERE
 
 
-![QR](https://github.com/DjayselPessoa/projetoPFN/blob/main/qrcode_github.com.png)
+![QR](https://github.com/DjayselPessoa/projetoPFN/blob/main/SRC/qrcode_github.com.png)
