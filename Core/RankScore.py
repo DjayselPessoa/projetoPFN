@@ -185,9 +185,9 @@ class RankScore:
                             print(linha)
                             print("|{:^11s}|{:^13s}|{:^11s}|".format("NOME", "ID PESSOAL", "SCORE"))
                             print(linha)
-                            print("|{:^11s}|{:^13s}|{:^11s}|".format(str(first[victory1]), str(local1[victory1]), str(valorScore1[victory1])))
+                            print("|{:^11s}|{:^13s}|{:^11s}|".format(str(first[victory1 - 1]), str(local1[victory1 - 1]), str(valorScore1[victory1 - 1])))
                             print(linha)
-                            print("|{:^11s}|{:^13s}|{:^11s}|".format(str(second[victory2]), str(local2[victory2]), str(valorScore2[victory2])))
+                            print("|{:^11s}|{:^13s}|{:^11s}|".format(str(second[victory2 - 1]), str(local2[victory2 - 1]), str(valorScore2[victory2 - 1])))
                             print(linha)
                             raise ValueError("SCORE TERMINADO - LOADING!\n"+linha)
                     else:
@@ -195,7 +195,7 @@ class RankScore:
                         print(linha)
                         print("|{:^11s}|{:^13s}|{:^11s}|".format("NOME", "ID PESSOAL", "SCORE"))
                         print(linha)
-                        print("|{:^11s}|{:^13s}|{:^11s}|".format(str(first[victory1]), str(local1[victory1]), str(valorScore1[victory1])))
+                        print("|{:^11s}|{:^13s}|{:^11s}|".format(str(first[victory1 - 1]), str(local1[victory1 - 1]), str(valorScore1[victory1 - 1])))
                         print(linha)
                         raise ValueError("SCORE TERMINADO - LOADING!\n"+linha)                
 
