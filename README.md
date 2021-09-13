@@ -21,6 +21,11 @@ IMPORTANTE:
 
 Se houver Bugs reportem!
 
+v0.7 update -> 13/09/2021
+- Adicionada a classe RankScore: Mostra apenas um único vencedor que no caso possuirá o maior score.
+- Rank.py foi adicionado e LerScore.py foi modificado
+- Inicio.py foi atualizado e exibição de texto foi modificada no processo. Alguns testes foram corrigidos.
+
 v0.6 update -> 11/09/2021:
 - Corrigido um tratamento durante o teste de senha que poderia confundir o usuário
 - Corrigido o código usado para abrir o score, dependendo do ocorrido poderia não ler o score correto
@@ -80,6 +85,11 @@ IMPORTANT:
 - That's the only way to make the program always write below the last line and not on the last line!
 
 If there are Bugs report!
+
+v0.7 update -> 13/09/2021
+- Added rankscore class: Shows only a single winner who in this case will have the highest score.
+- Rank.py has been added and LerScore.py been modified
+- Inicio.py has been updated and text display has been modified in the process. Some tests have been fixed.
 
 v0.6 update -> 11/09/2021:
 - Fixed a treatment during password testing that could confuse the user
