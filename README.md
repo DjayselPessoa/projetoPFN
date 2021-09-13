@@ -21,6 +21,9 @@ IMPORTANTE:
 
 Se houver Bugs reportem!
 
+v0.7A update -> 13/09/2021
+- Agora o rank consegue obter o segundo e o terceiro lugar se houver.
+
 v0.7 update -> 13/09/2021
 - Adicionada a classe RankScore: Mostra apenas um único vencedor que no caso possuirá o maior score.
 - Rank.py foi adicionado e LerScore.py foi modificado
@@ -85,6 +88,9 @@ IMPORTANT:
 - That's the only way to make the program always write below the last line and not on the last line!
 
 If there are Bugs report!
+
+v0.7A update -> 13/09/2021
+- Now the rank can get the second and third place if there is.
 
 v0.7 update -> 13/09/2021
 - Added rankscore class: Shows only a single winner who in this case will have the highest score.
