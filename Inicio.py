@@ -5,6 +5,7 @@ from Core.Entrar import ObjEntrar
 from Core.AbrirCSV import ObjAbrirCSV
 from Data.CriarProfile import ObjCriarProfile
 from Data.UpdateScore import ObjUpdateScore
+from Core.RankScore import ObjRankScore
 from csv import writer
 from csv import QUOTE_MINIMAL
 import os
@@ -46,12 +47,12 @@ while active:
 
         elif len(cod) != 0 or alert == 1:
             print("\nBem vindo ao PYTHON FOR NOOBS!\n\nUtilize as letras iniciais para acessar: ->\n")
-            listaExibir = ["Entrar", "Criar", "Sair", "[E]", "[C]", "[S]"]
-            for i in range(3):
-                print("{:<7s}{:^7s}".format(listaExibir[i], listaExibir[i+3]))
+            listaExibir = ["Entrar", "Criar", "Sair", "Rank", "[E]", "[C]", "[S]", "[R]"]
+            for i in range(4):
+                print("{:<7s}{:^7s}".format(listaExibir[i], listaExibir[i + 4]))
             entrarCriar = (str(input(": -> "))).lower()
 
-        if entrarCriar in "criar":
+        if entrarCriar in "Cc":
             print("\nIniciando Criação: -> ")
             alert = ObjCriarProfile.criarprofile(alert, pegarDirRaiz)
             novoCod = "#"+str(alert + 1)
@@ -70,7 +71,7 @@ while active:
 
             raise ValueError("\nREINICIANDO!")
 
-        elif entrarCriar in "entrar":
+        elif entrarCriar in "Ee":
             confirmar, position = ObjEntrar.entrar(nome, senha)
             if confirmar == 1:
                 showName = nome[position].capitalize()
@@ -91,11 +92,15 @@ while active:
             elif confirmar == 0:
                 raise ValueError("\nLOADING -> ")
 
-        elif entrarCriar in "sair":
+        elif entrarCriar in "Ss":
             print("\nFINALIZANDO APLICAÇÃO!")
 
             active = False
             raise ValueError("\nDESLIGANDO!")
+
+        elif entrarCriar in "Rr":
+            ObjRankScore.rankscore(cod, pegarDirRaiz, nome)
+            raise ValueError("\nLOADING - > ")
 
     except ValueError as e:
         raise ValueError("\nLOG: ->", e)
