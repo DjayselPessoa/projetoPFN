@@ -10,13 +10,23 @@ class RankScore:
             self.nome = nome
 
             cont = 1
-            maior = 0
+            maior1 = 0
+            maior2 = 0
+            maior3 = 0
             x = 0
             y = 0
             tickTack = 0
-            local = []
-            valorScore = []
+            local1 = []
+            local2 = []
+            local3 = []
+            valorScore1 = []
+            valorScore2 = []
+            valorScore3 = []
             first = []
+            second = []
+            third = []
+            evitar1 = str
+            evitar2 = str
             active = True
 
             if len(self.cod) == 0:
@@ -32,10 +42,10 @@ class RankScore:
                         scoreUser = ObjLerScore.lerscore(nomeScore, self.pegarDirRaiz)
                         x = int(scoreUser)
                         tickTack = 1
-                        if maior < x:
-                            maior = x
-                            local.append(self.cod[cont - 1])
-                            valorScore.append(x)
+                        if maior1 < x:
+                            maior1 = x
+                            local1.append(self.cod[cont - 1])
+                            valorScore1.append(x)
                             first.append(self.nome[cont - 1])
                             cont += 1
                             continue
@@ -47,25 +57,147 @@ class RankScore:
                         y = int(scoreUser)
                         tickTack = 0
 
-                        if maior < y:
-                            maior = y
-                            local.append(self.cod[cont - 1])
-                            valorScore.append(y)
+                        if maior1 < y:
+                            maior1 = y
+                            local1.append(self.cod[cont - 1])
+                            valorScore1.append(y)
                             first.append(self.nome[cont - 1])
                             cont += 1
                             continue
                         cont += 1
                         continue
-            else:
+                victory1 = len(local1)
+                if len(cod) - 2 > 0 and active == False:
+                    cont = 1
+                    tickTack = 0
+                    active = True
+                    evitar1 = "score_"+local1[len(local1) - 1]+".csv"
+                    for i in range(len(self.cod)):
+                        if i == (len(self.cod) - 1):
+                            active = False
+                        if tickTack == 0:
+                            nomeScore = "score_"+self.cod[cont - 1]+".csv"
+                            if nomeScore == evitar1:
+                                tickTack = 1
+                                cont += 1
+                                continue
+                            scoreUser = ObjLerScore.lerscore(nomeScore, self.pegarDirRaiz)
+                            x = int(scoreUser)
+                            tickTack = 1
+                            if maior2 < x:
+                                maior2 = x
+                                local2.append(self.cod[cont - 1])
+                                valorScore2.append(x)
+                                second.append(self.nome[cont - 1])
+                                cont += 1
+                                continue
+                            cont += 1
+                            continue
+                        elif tickTack == 1:
+                            nomeScore = "score_"+self.cod[cont - 1]+".csv"
+                            if nomeScore == evitar1:
+                                tickTack = 0
+                                cont += 1
+                                continue
+                            scoreUser = ObjLerScore.lerscore(nomeScore, self.pegarDirRaiz)
+                            y = int(scoreUser)
+                            tickTack = 0
 
-                victory = len(local) - 1
-                linha = "-" * 40
-                print(linha)
-                print("|{:^11s}|{:^13s}|{:^11s}|".format("NOME", "ID PESSOAL", "SCORE"))
-                print(linha)
-                print("|{:^11s}|{:^13s}|{:^11s}|".format(str(first[victory]), str(local[victory]), str(valorScore[victory])))
-                print(linha)
-                raise ValueError("SCORE TERMINADO - LOADING!\n"+linha)
+                            if maior2 < y:
+                                maior2 = y
+                                local2.append(self.cod[cont - 1])
+                                valorScore2.append(y)
+                                second.append(self.nome[cont - 1])
+                                cont += 1
+                                continue
+                            cont += 1
+                            continue
+                victory2 = len(local2)
+                if len(cod) - 3 > 0 and active == False:
+                    cont = 1
+                    tickTack = 0
+                    active = True
+                    evitar1 = "score_"+local1[len(local1) - 1]+".csv"
+                    evitar2 = "score_"+local2[len(local2) - 1]+".csv"
+                    # print(local2)
+                    for i in range(len(self.cod)):
+                        if i == (len(self.cod) - 1):
+                            active = False
+                        if tickTack == 0:
+                            nomeScore = "score_"+self.cod[cont - 1]+".csv"
+                            if nomeScore == evitar1 or nomeScore == evitar2:
+                                tickTack = 1
+                                cont += 1
+                                continue
+                            scoreUser = ObjLerScore.lerscore(nomeScore, self.pegarDirRaiz)
+                            x = int(scoreUser)
+                            print(x)
+                            tickTack = 1
+                            if maior3 < x:
+                                maior3 = x
+                                print(maior3)
+                                local3.append(self.cod[cont - 1])
+                                valorScore3.append(x)
+                                third.append(self.nome[cont - 1])
+                                cont += 1
+                                continue
+                            cont += 1
+                            continue
+                        elif tickTack == 1:
+                            nomeScore = "score_"+self.cod[cont - 1]+".csv"
+                            if nomeScore == evitar1 or nomeScore == evitar2:
+                                tickTack = 0
+                                cont += 1
+                                continue
+                            scoreUser = ObjLerScore.lerscore(nomeScore, self.pegarDirRaiz)
+                            y = int(scoreUser)
+                            tickTack = 0
+
+                            if maior3 < y:
+                                maior3 = y
+                                local3.append(self.cod[cont - 1])
+                                valorScore3.append(y)
+                                third.append(self.nome[cont - 1])
+                                cont += 1
+                                continue
+                            cont += 1
+                            continue
+                victory3 = len(local3)
+                # print(victory3)
+                # print(local3)
+            else:
+                if victory1 > 0:
+                    if victory2 > 0:
+                        if victory3 > 0:
+                            linha = "-" * 40
+                            print(linha)
+                            print("|{:^11s}|{:^13s}|{:^11s}|".format("NOME", "ID PESSOAL", "SCORE"))
+                            print(linha)
+                            print("|{:^11s}|{:^13s}|{:^11s}|".format(str(first[victory1 - 1]), str(local1[victory1 - 1]), str(valorScore1[victory1 - 1])))
+                            print(linha)
+                            print("|{:^11s}|{:^13s}|{:^11s}|".format(str(second[victory2 - 1]), str(local2[victory2 - 1]), str(valorScore2[victory2 - 1])))
+                            print(linha)
+                            print("|{:^11s}|{:^13s}|{:^11s}|".format(str(third[victory3 - 1]), str(local3[victory3 - 1]), str(valorScore3[victory3 - 1])))
+                            print(linha)
+                            raise ValueError("SCORE TERMINADO - LOADING!\n"+linha)
+                        else:
+                            linha = "-" * 40
+                            print(linha)
+                            print("|{:^11s}|{:^13s}|{:^11s}|".format("NOME", "ID PESSOAL", "SCORE"))
+                            print(linha)
+                            print("|{:^11s}|{:^13s}|{:^11s}|".format(str(first[victory1]), str(local1[victory1]), str(valorScore1[victory1])))
+                            print(linha)
+                            print("|{:^11s}|{:^13s}|{:^11s}|".format(str(second[victory2]), str(local2[victory2]), str(valorScore2[victory2])))
+                            print(linha)
+                            raise ValueError("SCORE TERMINADO - LOADING!\n"+linha)
+                    else:
+                        linha = "-" * 40
+                        print(linha)
+                        print("|{:^11s}|{:^13s}|{:^11s}|".format("NOME", "ID PESSOAL", "SCORE"))
+                        print(linha)
+                        print("|{:^11s}|{:^13s}|{:^11s}|".format(str(first[victory1]), str(local1[victory1]), str(valorScore1[victory1])))
+                        print(linha)
+                        raise ValueError("SCORE TERMINADO - LOADING!\n"+linha)                
 
         except ValueError as e:
             print("LOG: -> ", e)
