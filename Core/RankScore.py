@@ -59,13 +59,16 @@ class RankScore:
             else:
 
                 victory = len(local) - 1
-
-                print("{:^11s}{:^13s}{:^11s}".format("NOME", "ID PESSOAL", "SCORE"))
-                print("{:^11s}{:^13s}{:^11s}".format(str(first[victory]), str(local[victory]), str(valorScore[victory])))
-                raise ValueError("SCORE TERMINADO!")
+                linha = "-" * 40
+                print(linha)
+                print("|{:^11s}|{:^13s}|{:^11s}|".format("NOME", "ID PESSOAL", "SCORE"))
+                print(linha)
+                print("|{:^11s}|{:^13s}|{:^11s}|".format(str(first[victory]), str(local[victory]), str(valorScore[victory])))
+                print(linha)
+                raise ValueError("SCORE TERMINADO - LOADING!\n"+linha)
 
         except ValueError as e:
-            print("\nLOG: -> ", e)
+            print("LOG: -> ", e)
 
 
 ObjRankScore = RankScore()
