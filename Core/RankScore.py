@@ -131,7 +131,7 @@ class RankScore:
                                 continue
                             scoreUser = ObjLerScore.lerscore(nomeScore, self.pegarDirRaiz)
                             x = int(scoreUser)
-                            print(x)
+                            # print(x)
                             tickTack = 1
                             if maior3 < x:
                                 maior3 = x
