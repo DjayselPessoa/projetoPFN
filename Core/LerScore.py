@@ -1,30 +1,23 @@
 import csv
 from pathlib import Path
 
-'''
-    Essa classe virou um método dentro do arquivo AbrirCSV.py
-    This class has become a method within the AbrirCSV.py
-'''
 
 class LerScore:
 
-    def lerscore(self, position, pegarDirRaiz):
+    def lerscore(self, nomeScore, pegarDirRaiz):
         self.pegarDirRaiz = pegarDirRaiz
-        self.position = position
-        position = self.position
+        self.nomeScore = nomeScore
 
         scoreUser = []
-        codPath = "#"+str(position - 1)
-        nomeArquivoSCORE = "score_"+codPath+".csv"
-        pathTratado = str(self.pegarDirRaiz)
-        home = Path(pathTratado)
+        nomeArquivoSCORE = self. nomeScore
+        home = Path(self.pegarDirRaiz)
         sourcePath = Path(home, "Data", nomeArquivoSCORE)
 
         for f in csv.DictReader(open(sourcePath), delimiter=','):
             scoreUser.append(f["SCORE"])
 
-        print(scoreUser)
-        return scoreUser
+        # print(scoreUser)
+        return scoreUser[len(scoreUser) - 1]
 
 
 ObjLerScore = LerScore()
