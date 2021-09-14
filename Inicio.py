@@ -92,10 +92,11 @@ while active:
                 # print(codUser)
                 active, scoreUserFinal, codUserFinal = ObjLayerMain.layermain(nomeUser, scoreLido, codUser, active)
                 # print(scoreUserFinal)
-                if active == False:
+                if active is False:
+                    active = True
                     active = ObjUpdateScore.updatescore(scoreUserFinal, codUserFinal, active, pegarDirRaiz)
                     sleep(1)
-                    raise ValueError("\nSAINDO!")
+                    raise ValueError("\nLOADING -> ")
             elif confirmar == 0:
                 sleep(1)
                 raise ValueError("\nLOADING -> ")
@@ -114,7 +115,6 @@ while active:
             raise ValueError("\nLOADING - > ")
 
     except ValueError as e:
-
         raise ValueError("\nLOG: ->", e)
     finally:
         continue
