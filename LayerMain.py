@@ -18,8 +18,8 @@ class LayerMain:
                 print("\n" + ("-" * 20) + "---- PYTHON FOR NOOBS ----")
                 print("\n" + ("-" * 76) + "PFN-------DjPESSÔA -")             
                 print(f"USER: {self.nome} <-> SCORE: {self.score}")
-                print("\nAbaixo estão todos os tipos de operadores menos o bit a bit\nUtilize os números para escolher:\n\n1 - Operadores Aritméticos\n2 - Operadores de Atribuição\n3 - Operadores de Comparação\n4 - Operadores Lógicos\n5 - Operadores de Identidade\n6 - Operadores de Associação\n7 - Sobre o programa\n8 - Sair\n","\n")
-                escolhaOp = str(input("Escolha os operadores que deseja estudar: "))
+                print("\nAbaixo estão todos os tipos de operadores menos o bit a bit\nUtilize os números para escolher:\n\n[1] - Operadores Aritméticos\n[2] - Operadores de Atribuição\n[3] - Operadores de Comparação\n[4] - Operadores Lógicos\n[5] - Operadores de Identidade\n[6] - Operadores de Associação\n[7] - Sobre o programa\n[8] - Voltar\n","\n")
+                escolhaOp = str(input("Qual operador deseja estudar: -> "))
                 if not escolhaOp in "12345678":
                     raise ValueError("\nDADO INCORRETO - REINICIANDO!")
                 else:
