@@ -27,7 +27,7 @@ class UpdateScore:
             d2.writerow(data)
             print("Salvando SCORE: -> ", data)
         escreverFile.close()
-        sleep(1)
+        sleep(1.5)
         print("SCORE ATUALIZADO!")
         return self.active
 
