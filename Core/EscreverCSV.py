@@ -1,6 +1,7 @@
 import csv
 from csv import writer
 from pathlib import Path
+from time import sleep
 
 
 class EscreverCSV:
@@ -13,11 +14,14 @@ class EscreverCSV:
         home = Path(pathTratado)
         sourcePath = Path(home, "Data", "SAVE.csv")
         with open(sourcePath, 'a+', newline='') as escreverFile:
-            print("Salvando DATA: -> {:<5s} -{:^5s}- {:^15s}".format("NOME", "ID", "SCOREFILE"))
-            print("Salvando DATA: -> {:<5s} -{:^5s}- {:^15s}".format(self.data[1], self.data[0], self.data[3]))
+            sleep(1)
+            print("Salvando DATA: -> {:^11s} -{:^13s}- {:^15s}".format("NOME", "ID", "SCOREFILE"))
+            sleep(.5)
+            print("Salvando DATA: -> {:^11s} -{:^13s}- {:^15s}".format(self.data[1], self.data[0], self.data[3]))
             d2 = writer(escreverFile)
             d2.writerow(data)
         escreverFile.close()
+        sleep(1)
         print("PROFILE CRIADO!")
         fim = 1
         return fim
