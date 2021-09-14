@@ -1,6 +1,7 @@
 import csv
 from csv import writer
 from pathlib import Path
+from time import sleep
 
 
 class UpdateScore:
@@ -26,6 +27,7 @@ class UpdateScore:
             d2.writerow(data)
             print("Salvando SCORE: -> ", data)
         escreverFile.close()
+        sleep(1)
         print("SCORE ATUALIZADO!")
         return self.active
 
