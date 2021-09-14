@@ -44,7 +44,7 @@ class Escolha:
                 sair = "no"
                 return sair, self.score, self.cod
             elif self.escolhaOp == "8":
-                print("\nSAINDO")
+                print("\nVOLTANDO")
                 sair = "ok"
                 return sair, self.score, self.cod
 
