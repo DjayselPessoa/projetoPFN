@@ -21,6 +21,9 @@ IMPORTANTE:
 
 Se houver Bugs reportem!
 
+v0.8 update -> 14/09/2021
+- Utilizando sleep() para alterar a fluidez do programa.
+
 v0.7A update -> 13/09/2021
 - Agora o rank consegue obter o segundo e o terceiro lugar se houver.
 
@@ -88,6 +91,9 @@ IMPORTANT:
 - That's the only way to make the program always write below the last line and not on the last line!
 
 If there are Bugs report!
+
+v0.8 update -> 14/09/2021
+- Using sleep() to change the fluidity of the program.
 
 v0.7A update -> 13/09/2021
 - Now the rank can get the second and third place if there is.
