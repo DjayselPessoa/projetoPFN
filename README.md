@@ -21,6 +21,9 @@ IMPORTANTE:
 
 Se houver Bugs reportem!
 
+v0.8A update -> 14/09/2021
+- Alterada a forma como temina a aplicação, salvando antes de efetuar a saida podendo retornar ao programa ou averiguar o rank
+
 v0.8 update -> 14/09/2021
 - Utilizando sleep() para alterar a fluidez do programa.
 
@@ -91,6 +94,9 @@ IMPORTANT:
 - That's the only way to make the program always write below the last line and not on the last line!
 
 If there are Bugs report!
+
+v0.8A update -> 14/09/2021
+- Changed the way the application ends, saving before exiting and being able to return to the program or check the rank
 
 v0.8 update -> 14/09/2021
 - Using sleep() to change the fluidity of the program.
