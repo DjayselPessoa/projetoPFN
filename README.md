@@ -22,7 +22,7 @@ IMPORTANTE:
 Se houver Bugs reportem!
 
 v0.8A update -> 14/09/2021
-- Alterada a forma como temina a aplicação, salvando antes de efetuar a saida podendo retornar ao programa ou averiguar o rank
+- Alterada a forma como termina a aplicação, salvando antes de efetuar a saida, podendo retornar ao programa ou averiguar o rank
 
 v0.8 update -> 14/09/2021
 - Utilizando sleep() para alterar a fluidez do programa.
