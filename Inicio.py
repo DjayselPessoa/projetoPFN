@@ -9,6 +9,7 @@ from Core.RankScore import ObjRankScore
 from csv import writer
 from csv import QUOTE_MINIMAL
 import os
+from time import sleep
 
 
 active = True
@@ -31,6 +32,7 @@ while active:
             print("você precisará criar um profile: -> ")
             alert = ObjCriarProfile.criarprofile(alert, pegarDirRaiz)
             print("GERANDO SCOREFILE!")
+            sleep(1)
             novoCod = "#"+str(alert + 1)
             novoScore = 0
 
@@ -54,6 +56,7 @@ while active:
 
         if entrarCriar in "Cc":
             print("\nIniciando Criação: -> ")
+            sleep(1)
             alert = ObjCriarProfile.criarprofile(alert, pegarDirRaiz)
             novoCod = "#"+str(alert + 1)
             novoScore = 0
@@ -72,10 +75,13 @@ while active:
             raise ValueError("\nREINICIANDO!")
 
         elif entrarCriar in "Ee":
+            sleep(1)
             confirmar, position = ObjEntrar.entrar(nome, senha)
             if confirmar == 1:
                 showName = nome[position].capitalize()
+                sleep(1)
                 print(f"\nSua entrada foi permitida! Bem vindo {showName}!\n")
+                sleep(2)
                 nomeUser = nome[position]
                 # print(nomeUser)
                 scoreUser = ObjAbrirSCORE.abrirScore(pegarDirRaiz, position, cod)
@@ -88,21 +94,27 @@ while active:
                 # print(scoreUserFinal)
                 if active == False:
                     active = ObjUpdateScore.updatescore(scoreUserFinal, codUserFinal, active, pegarDirRaiz)
+                    sleep(1)
                     raise ValueError("\nSAINDO!")
             elif confirmar == 0:
+                sleep(1)
                 raise ValueError("\nLOADING -> ")
 
         elif entrarCriar in "Ss":
+            sleep(1)
             print("\nFINALIZANDO APLICAÇÃO!")
 
             active = False
+            sleep(1)
             raise ValueError("\nDESLIGANDO!")
 
         elif entrarCriar in "Rr":
             ObjRankScore.rankscore(cod, pegarDirRaiz, nome)
+            sleep(1)
             raise ValueError("\nLOADING - > ")
 
     except ValueError as e:
+
         raise ValueError("\nLOG: ->", e)
     finally:
         continue
