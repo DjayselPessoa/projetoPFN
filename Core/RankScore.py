@@ -1,4 +1,5 @@
 from Core.LerScore import ObjLerScore
+from time import sleep
 
 
 class RankScore:
@@ -30,6 +31,7 @@ class RankScore:
             active = True
 
             if len(self.cod) == 0:
+                sleep(1)
                 raise ValueError("SEM REGISTROS VÁLIDOS! REINICIANDO!")
 
             while active:
@@ -135,7 +137,7 @@ class RankScore:
                             tickTack = 1
                             if maior3 < x:
                                 maior3 = x
-                                print(maior3)
+                                # print(maior3)
                                 local3.append(self.cod[cont - 1])
                                 valorScore3.append(x)
                                 third.append(self.nome[cont - 1])
@@ -173,33 +175,43 @@ class RankScore:
                             print(linha)
                             print("|{:^11s}|{:^13s}|{:^11s}|".format("NOME", "ID PESSOAL", "SCORE"))
                             print(linha)
+                            sleep(.5)
                             print("|{:^11s}|{:^13s}|{:^11s}|".format(str(first[victory1 - 1]), str(local1[victory1 - 1]), str(valorScore1[victory1 - 1])))
                             print(linha)
+                            sleep(.5)
                             print("|{:^11s}|{:^13s}|{:^11s}|".format(str(second[victory2 - 1]), str(local2[victory2 - 1]), str(valorScore2[victory2 - 1])))
                             print(linha)
+                            sleep(.5)
                             print("|{:^11s}|{:^13s}|{:^11s}|".format(str(third[victory3 - 1]), str(local3[victory3 - 1]), str(valorScore3[victory3 - 1])))
                             print(linha)
+                            sleep(.5)
                             raise ValueError("SCORE TERMINADO - LOADING!\n"+linha)
                         else:
                             linha = "-" * 40
                             print(linha)
                             print("|{:^11s}|{:^13s}|{:^11s}|".format("NOME", "ID PESSOAL", "SCORE"))
                             print(linha)
+                            sleep(.5)
                             print("|{:^11s}|{:^13s}|{:^11s}|".format(str(first[victory1 - 1]), str(local1[victory1 - 1]), str(valorScore1[victory1 - 1])))
                             print(linha)
+                            sleep(.5)
                             print("|{:^11s}|{:^13s}|{:^11s}|".format(str(second[victory2 - 1]), str(local2[victory2 - 1]), str(valorScore2[victory2 - 1])))
                             print(linha)
+                            sleep(.5)
                             raise ValueError("SCORE TERMINADO - LOADING!\n"+linha)
                     else:
                         linha = "-" * 40
                         print(linha)
                         print("|{:^11s}|{:^13s}|{:^11s}|".format("NOME", "ID PESSOAL", "SCORE"))
                         print(linha)
+                        sleep(.5)
                         print("|{:^11s}|{:^13s}|{:^11s}|".format(str(first[victory1 - 1]), str(local1[victory1 - 1]), str(valorScore1[victory1 - 1])))
                         print(linha)
+                        sleep(.5)
                         raise ValueError("SCORE TERMINADO - LOADING!\n"+linha)                
 
         except ValueError as e:
+            sleep(1)
             print("LOG: -> ", e)
 
 
