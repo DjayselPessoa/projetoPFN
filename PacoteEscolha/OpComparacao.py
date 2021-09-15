@@ -31,7 +31,7 @@ class OpComparacao:
                         print("\nCaractere inválido! REINICIANDO!")
                         raise ValueError("-" * 99)
                 elif escolhaMenu == "2":
-                    print("\nCom o operador Diferente [!=] podemos verificar se os valores de dois operandos são distintos. Se sim a condição se torna verdadeira.\n")
+                    print("\nCom o operador Diferente (!=) podemos verificar se os valores de dois operandos são distintos. Se sim a condição se torna verdadeira.\n")
                     print("numero1 = 5 -> numero2 = 3")
                     print("If numero1 != numero2:")
                     print("\nCom esses valores das variáveis informe se o programa conseguirá acessar o bloco de código do If em questão")
@@ -49,7 +49,7 @@ class OpComparacao:
                         print("\nCaractere inválido! REINICIANDO!")
                         raise ValueError("-" * 99)
                 elif escolhaMenu == "3":
-                    print("\nCom o operador Maior que [>] podemos verificar se o valor de um operando é maior que de outro operando. Se sim a condição se torna verdadeira.\n")
+                    print("\nCom o operador Maior que (>) podemos verificar se o valor de um operando é maior que de outro operando. Se sim a condição se torna verdadeira.\n")
                     print("numero1 = 5 -> numero2 = 3")
                     print("If numero1 > numero2:")
                     print("\nCom esses valores das variáveis informe se o programa conseguirá acessar o bloco de código do If em questão")
@@ -67,7 +67,7 @@ class OpComparacao:
                         print("\nCaractere inválido! REINICIANDO!")
                         raise ValueError("-" * 99)
                 elif escolhaMenu == "4":
-                    print("\nCom o operador Menor que [<] podemos verificar se o valor de um operando é menor que de outro operando. Se sim a condição se torna verdadeira.\n")
+                    print("\nCom o operador Menor que (<) podemos verificar se o valor de um operando é menor que de outro operando. Se sim a condição se torna verdadeira.\n")
                     print("numero1 = 3 -> numero2 = 3")
                     print("If numero1 < numero2:")
                     print("\nCom esses valores das variáveis informe se o programa conseguirá acessar o bloco de código do If em questão")
@@ -85,7 +85,7 @@ class OpComparacao:
                         print("\nCaractere inválido! REINICIANDO!")
                         raise ValueError("-" * 99)
                 elif escolhaMenu == "5":
-                    print("\nCom o operador Maior ou igual [>=] podemos verificar se o valor de um operando é maior que de outro operando ou também se é igual. Se sim a condição se torna verdadeira.\n")
+                    print("\nCom o operador Maior ou igual (>=) podemos verificar se o valor de um operando é maior que de outro operando ou também se é igual. Se sim a condição se torna verdadeira.\n")
                     print("numero1 = 3 -> numero2 = 3")
                     print("If numero1 >= numero2:")
                     print("\nCom esses valores das variáveis informe se o programa conseguirá acessar o bloco de código do If em questão")
@@ -103,7 +103,7 @@ class OpComparacao:
                         print("\nCaractere inválido! REINICIANDO!")
                         raise ValueError("-" * 99)
                 elif escolhaMenu == "6":
-                    print("\nCom o operador Menor ou igual [<=] podemos verificar se o valor de um operando é menor que de outro operando ou se é igual. Se sim a condição se torna verdadeira.\n")
+                    print("\nCom o operador Menor ou igual (<=) podemos verificar se o valor de um operando é menor que de outro operando ou se é igual. Se sim a condição se torna verdadeira.\n")
                     print("numero1 = 3 -> numero2 = 3")
                     print("If numero1 <= numero2:")
                     print("\nCom esses valores das variáveis informe se o programa conseguirá acessar o bloco de código do If em questão")
