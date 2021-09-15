@@ -8,12 +8,12 @@ class OpComparacao:
         active = True
         while active:
 
-            print(f"score: {self.score}\nEscolha abaixo qual Operador de Comparação você deseja aprender:\n","\n1 - Igual [==]\n2 - Diferente [!=]\n3 - Maior que [>]\n4 - Menor que [<]\n5 - Maior ou igual [>=]\n6 - Menor ou igual [<=]\n7 - Voltar\n")
+            print(f"score: {self.score}\nEscolha abaixo qual Operador de Comparação você deseja aprender:\n","\n[1] - Igual (==)\n[2] - Diferente (!=)\n[3] - Maior que (>)\n[4] - Menor que (<)\n[5] - Maior ou igual (>=)\n[6] - Menor ou igual (<=)\n[7] - Voltar\n")
             escolhaMenu = str(input("Escolha uma opção: "))
 
             try:
                 if escolhaMenu == "1":
-                    print("\nCom o operador Igual [==] podemos verificar se os valores de dois operandos são iguais. Se sim a condição se torna verdadeira.")
+                    print("\nCom o operador Igual (==) podemos verificar se os valores de dois operandos são iguais. Se sim a condição se torna verdadeira.")
                     print("numero1 = 2 -> numero2 = 3")
                     print("If numero1 == numero2:")
                     print("\nCom esses valores das variáveis informe se o programa conseguirá acessar o bloco de código do If em questão")
