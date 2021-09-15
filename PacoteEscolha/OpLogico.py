@@ -8,12 +8,12 @@ class OpLogico:
         active = True
         while active:
 
-            print(f"score: {self.score}\nEscolha abaixo qual Operador lógico você deseja aprender:\n","\n1 - E lógico [and]\n2 - Ou lógico [or]\n3 - Não lógico [not]\n4 - Voltar\n")
+            print(f"score: {self.score}\nEscolha abaixo qual Operador lógico você deseja aprender:\n","\n[1] - E lógico (and)\n[2] - Ou lógico (or)\n[3] - Não lógico (not)\n[4] - Voltar\n")
             escolhaMenu = str(input("Escolha uma opção: "))
 
             try:
                 if escolhaMenu == "1":
-                    print("\nO operador E lógico [and] retorna Verdadeiro apenas se ambos os testes lógicos forem Verdadeiros, caso contrário, ele retorna Falso.")
+                    print("\nO operador E lógico (and) retorna Verdadeiro apenas se ambos os testes lógicos forem Verdadeiros, caso contrário, ele retorna Falso.")
                     print("Os testes lógicos normalmente são condições de teste para poder acessar algum bloco de código. Esses tipo de operador permite que mais de uma condição seja testada num mesmo IF. Ex.:\n")
                     print("numero1 = 2 -> numero2 = 3 -> numero3 = 4")
                     print("If numero1 > numero2 and numero3 > numero2:")
@@ -32,7 +32,7 @@ class OpLogico:
                         print("\nCaractere inválido! REINICIANDO!")
                         raise ValueError("-" * 99)
                 elif escolhaMenu == "2":
-                    print("\nO operador Ou lógico [or] retorna Verdadeiro quando pelo menos um dos testes lógicos for Verdadeiro, caso contrário, ele retorna Falso.")
+                    print("\nO operador Ou lógico (or) retorna Verdadeiro quando pelo menos um dos testes lógicos for Verdadeiro, caso contrário, ele retorna Falso.")
                     print("Os testes lógicos normalmente são condições de teste para poder acessar algum bloco de código. Esses tipo de operador permite que mais de uma condição seja testada num mesmo IF. Ex.:\n")
                     print("numero1 = 2 -> numero2 = 3 -> numero3 = 4")
                     print("If numero1 > numero2 or numero3 > numero2:")
@@ -50,7 +50,7 @@ class OpLogico:
                         print("\nCaractere inválido! REINICIANDO!")
                         raise ValueError("-" * 99)
                 elif escolhaMenu == "3":
-                    print("\nO operador Não lógico [not] inverte a condição.")
+                    print("\nO operador Não lógico (not) inverte a condição.")
                     print("Os testes lógicos normalmente são condições de teste para poder acessar algum bloco de código. Ex.:\n")
                     print("numero1 = 2 -> numero2 = 3 -> numero3 = 4")
                     print("If not numero1 > numero2:")
