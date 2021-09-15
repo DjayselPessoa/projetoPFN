@@ -7,22 +7,22 @@ class OpAssociacao:
         print("-" * 99)
         active = True
         while active:
-            print(f"score: {self.score}\nEscolha abaixo qual Operador de Associação você deseja aprender:\n","\n1 - Dentro [in]\n2 - Não em [not in]\n3 - Voltar\n")
+            print(f"score: {self.score}\nEscolha abaixo qual Operador de Associação você deseja aprender:\n","\n[1] - (Dentro in)\n[2] - Não em (not in)\n[3] - Voltar\n")
             escolhaMenu = str(input("Escolha uma opção: "))
 
             try:
                 if escolhaMenu == "1":
                     print("\nO operador de Associação [in] verifica se o valor da esquerda está contido dentro da sequência dos valores da direita. Ex.:\n")
-                    print("numero1 = 2, numero2 = 3, lista = [1,3,4]")
-                    print("A - if num1 in lista:")
-                    print("B - if num2 in lista:")
-                    resposta = str(input("Informe qual das duas opções acima A e B será executada: "))
+                    print("\nnumero1 = 2, numero2 = 3, lista = [1,3,4]")
+                    print("[A] - if num1 in lista:")
+                    print("[B] - if num2 in lista:")
+                    resposta = str(input("\nInforme qual das duas opções acima A e B será executada: "))
                     if resposta in "Aa":
-                        print("Resposta errada! O valor da variável numero1 não está na sequência de valores da lista.")
+                        print("\nResposta errada! O valor da variável numero1 não está na sequência de valores da lista.")
                         self.score -= 1
                         raise ValueError("-" * 99)
                     elif resposta in "Bb":
-                        print("Resposta correta! O valor da variável numero2 está na sequência de valores da lista.")
+                        print("\nResposta correta! O valor da variável numero2 está na sequência de valores da lista.")
                         self.score += 1
                         raise ValueError("-" * 99)
                     else:
@@ -30,16 +30,16 @@ class OpAssociacao:
                         raise ValueError("-" * 99)
                 elif escolhaMenu == "2":
                     print("\nO operador de Associação [not in] verifica se o valor da esquerda não está contido dentro da sequência dos valores da direita:\n")
-                    print("numero1 = 2, numero2 = 3, lista = [1,3,4]")
-                    print("A - if not num1 in lista:")
-                    print("B - if not num2 in lista:")
-                    resposta = str(input("Informe qual das duas opções acima A e B está correta: "))
+                    print("\nnumero1 = 2, numero2 = 3, lista = [1,3,4]")
+                    print("[A] - if not num1 in lista:")
+                    print("[B] - if not num2 in lista:")
+                    resposta = str(input("\nInforme qual das duas opções acima A e B está correta: "))
                     if resposta in "Aa":
-                        print("Correto! O valor da variável num1 não está na sequência de valores da lista.")
+                        print("\nCorreto! O valor da variável num1 não está na sequência de valores da lista.")
                         self.score += 1
                         raise ValueError("-" * 99)
                     elif resposta in "Bb":
-                        print("Resposta incorreta! O valor da variável num2 está na sequência de valores da lista.")
+                        print("\nResposta incorreta! O valor da variável num2 está na sequência de valores da lista.")
                         self.score -= 1
                         raise ValueError("-" * 99)
                     else:
