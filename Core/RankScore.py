@@ -31,7 +31,6 @@ class RankScore:
             active = True
 
             if len(self.cod) == 0:
-                sleep(1)
                 raise ValueError("SEM REGISTROS VÁLIDOS! REINICIANDO!")
 
             while active:
@@ -40,6 +39,7 @@ class RankScore:
                     if i == (len(self.cod) - 1):
                         active = False
                     if tickTack == 0:
+                        # print("tt1 ", tickTack)
                         nomeScore = "score_"+self.cod[cont - 1]+".csv"
                         scoreUser = ObjLerScore.lerscore(nomeScore, self.pegarDirRaiz)
                         x = int(scoreUser)
@@ -54,11 +54,11 @@ class RankScore:
                         cont += 1
                         continue
                     elif tickTack == 1:
+                        # print("tt1 ", tickTack)
                         nomeScore = "score_"+self.cod[cont - 1]+".csv"
                         scoreUser = ObjLerScore.lerscore(nomeScore, self.pegarDirRaiz)
                         y = int(scoreUser)
                         tickTack = 0
-
                         if maior1 < y:
                             maior1 = y
                             local1.append(self.cod[cont - 1])
@@ -69,7 +69,7 @@ class RankScore:
                         cont += 1
                         continue
                 victory1 = len(local1)
-                if len(cod) - 2 > 0 and active == False:
+                if len(cod) - 1 > 0 and active == False:
                     cont = 1
                     tickTack = 0
                     active = True
@@ -78,6 +78,7 @@ class RankScore:
                         if i == (len(self.cod) - 1):
                             active = False
                         if tickTack == 0:
+                            # print("tt2 ", tickTack)
                             nomeScore = "score_"+self.cod[cont - 1]+".csv"
                             if nomeScore == evitar1:
                                 tickTack = 1
@@ -96,6 +97,7 @@ class RankScore:
                             cont += 1
                             continue
                         elif tickTack == 1:
+                            # print("tt2 ", tickTack)
                             nomeScore = "score_"+self.cod[cont - 1]+".csv"
                             if nomeScore == evitar1:
                                 tickTack = 0
@@ -115,7 +117,7 @@ class RankScore:
                             cont += 1
                             continue
                 victory2 = len(local2)
-                if len(cod) - 3 > 0 and active == False:
+                if len(cod) - 2 > 0 and active == False:
                     cont = 1
                     tickTack = 0
                     active = True
@@ -126,6 +128,7 @@ class RankScore:
                         if i == (len(self.cod) - 1):
                             active = False
                         if tickTack == 0:
+                            # print("tt3 ", tickTack)
                             nomeScore = "score_"+self.cod[cont - 1]+".csv"
                             if nomeScore == evitar1 or nomeScore == evitar2:
                                 tickTack = 1
@@ -146,6 +149,7 @@ class RankScore:
                             cont += 1
                             continue
                         elif tickTack == 1:
+                            # print("tt3 ", tickTack)
                             nomeScore = "score_"+self.cod[cont - 1]+".csv"
                             if nomeScore == evitar1 or nomeScore == evitar2:
                                 tickTack = 0
@@ -167,45 +171,31 @@ class RankScore:
                 victory3 = len(local3)
                 # print(victory3)
                 # print(local3)
+                # print("v1, v2, v3: ", victory1, victory2, victory3)
             else:
                 if victory1 > 0:
+                    linha = "-" * 40
+                    print(linha)
+                    print("|{:^11s}|{:^13s}|{:^11s}|".format("NOME", "ID PESSOAL", "SCORE"))
+                    print(linha)
+                    sleep(.5)
+                    print("|{:^11s}|{:^13s}|{:^11s}|".format(str(first[victory1 - 1]), str(local1[victory1 - 1]), str(valorScore1[victory1 - 1])))
                     if victory2 > 0:
+                        sleep(.5)
+                        print(linha)
+                        print("|{:^11s}|{:^13s}|{:^11s}|".format(str(second[victory2 - 1]), str(local2[victory2 - 1]), str(valorScore2[victory2 - 1])))
                         if victory3 > 0:
-                            linha = "-" * 40
-                            print(linha)
-                            print("|{:^11s}|{:^13s}|{:^11s}|".format("NOME", "ID PESSOAL", "SCORE"))
-                            print(linha)
                             sleep(.5)
-                            print("|{:^11s}|{:^13s}|{:^11s}|".format(str(first[victory1 - 1]), str(local1[victory1 - 1]), str(valorScore1[victory1 - 1])))
                             print(linha)
-                            sleep(.5)
-                            print("|{:^11s}|{:^13s}|{:^11s}|".format(str(second[victory2 - 1]), str(local2[victory2 - 1]), str(valorScore2[victory2 - 1])))
-                            print(linha)
-                            sleep(.5)
                             print("|{:^11s}|{:^13s}|{:^11s}|".format(str(third[victory3 - 1]), str(local3[victory3 - 1]), str(valorScore3[victory3 - 1])))
                             print(linha)
                             sleep(.5)
                             raise ValueError("SCORE TERMINADO - LOADING!\n"+linha)
                         else:
-                            linha = "-" * 40
-                            print(linha)
-                            print("|{:^11s}|{:^13s}|{:^11s}|".format("NOME", "ID PESSOAL", "SCORE"))
-                            print(linha)
-                            sleep(.5)
-                            print("|{:^11s}|{:^13s}|{:^11s}|".format(str(first[victory1 - 1]), str(local1[victory1 - 1]), str(valorScore1[victory1 - 1])))
-                            print(linha)
-                            sleep(.5)
-                            print("|{:^11s}|{:^13s}|{:^11s}|".format(str(second[victory2 - 1]), str(local2[victory2 - 1]), str(valorScore2[victory2 - 1])))
                             print(linha)
                             sleep(.5)
                             raise ValueError("SCORE TERMINADO - LOADING!\n"+linha)
                     else:
-                        linha = "-" * 40
-                        print(linha)
-                        print("|{:^11s}|{:^13s}|{:^11s}|".format("NOME", "ID PESSOAL", "SCORE"))
-                        print(linha)
-                        sleep(.5)
-                        print("|{:^11s}|{:^13s}|{:^11s}|".format(str(first[victory1 - 1]), str(local1[victory1 - 1]), str(valorScore1[victory1 - 1])))
                         print(linha)
                         sleep(.5)
                         raise ValueError("SCORE TERMINADO - LOADING!\n"+linha)                
