@@ -21,6 +21,10 @@ IMPORTANTE:
 
 Se houver Bugs reportem!
 
+v0.9 update -> 15/09/2021
+- Correção do módulo de rank. O atributo tickTack não alternava em certo momento.
+- Correção da apresentação final que impedia em certos momentos de mostrar o segundo e terceiro colocado
+
 v0.8A update -> 14/09/2021
 - Alterada a forma como termina a aplicação, salvando antes de efetuar a saida, podendo retornar ao programa ou averiguar o rank
 
@@ -94,6 +98,10 @@ IMPORTANT:
 - That's the only way to make the program always write below the last line and not on the last line!
 
 If there are Bugs report!
+
+v0.9 update -> 15/09/2021
+- Fixed rank module. The tickTack attribute did not toggle at one point.
+- Correction of the final presentation that prevented, at certain times, from showing the second and third place
 
 v0.8A update -> 14/09/2021
 - Changed the way the application ends, saving before exiting and being able to return to the program or check the rank
