@@ -1,5 +1,7 @@
 # PYTHON FOR NOOBS - [EN-US](https://github.com/DjayselPessoa/projetoPFN/blob/main/README.md#python-for-noobs)
 
+### necessário instalar o Python 3.9.6 em sua máquina! -> https://www.python.org/downloads/release/python-396/
+
 CORRIGIDO OS NOMES DOS ARQUIVOS! PARA INICIAR O PROGRAMA UTILIZE O ARQUIVO Inicio.py
 
 Este é um programa educativo que funciona pelo terminal com o intuito de explicar/ensinar sobre os operadores em Python para os iniciantes na linguagem.
@@ -77,6 +79,8 @@ V0.1 update:
 -----------------------------------------------------------------------------------------------------------------English
 
 # PYTHON FOR NOOBS
+
+### install Python 3.9.6 ->   https://www.python.org/downloads/release/python-396/
 
 FIXED FILE NAMES! TO START THE PROGRAM USE THE FILE Inicio.py
 
