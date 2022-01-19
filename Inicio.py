@@ -18,7 +18,7 @@ while active:
     try:
         os.chdir(os.path.dirname(__file__))
         pegarDirRaiz = str(os.getcwd())
-        print("Ok1 ", pegarDirRaiz)
+        # print("Ok1 ", pegarDirRaiz)
         alert = 0
         cod = []
         nome = []
