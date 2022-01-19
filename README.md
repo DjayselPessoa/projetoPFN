@@ -23,6 +23,9 @@ IMPORTANTE:
 
 Se houver Bugs reportem!
 
+v1.0 update -> 19/01/2022
+- espaços em branco nos nomes não são mais permitidos
+
 v0.9 update -> 15/09/2021
 - Correção do módulo de rank. O atributo tickTack não alternava em certo momento.
 - Correção da apresentação final que impedia em certos momentos de mostrar o segundo e terceiro colocado
@@ -102,6 +105,9 @@ IMPORTANT:
 - That's the only way to make the program always write below the last line and not on the last line!
 
 If there are Bugs report!
+
+v1.0 update -> 01/19/2022
+- blank spaces in names are no longer allowed
 
 v0.9 update -> 15/09/2021
 - Fixed rank module. The tickTack attribute did not toggle at one point.
