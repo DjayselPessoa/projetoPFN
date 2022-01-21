@@ -12,6 +12,11 @@ Na parte sobre o programa dentro da execução do programa existem links para si
 
 NENHUM LINK É NOCIVO, MAS VERIFIQUE MESMO ASSIM!
 
+---------------------------------------------
+FUTUROS UPDATES:
+versão inglês/português
+---------------------------------------------
+
 COMO USAR:
 - as opções em sua maioria são os números no começo de cada opção
 - para Entrar, Criar e Sair utilize a primeira letra de cada palavra
@@ -94,6 +99,11 @@ The bitwise operator type has been left out at this time.
 In the part about the program within the program execution there are links to sites that were used as a reference THAT WILL OPEN YOUR BROWSER! 
 
 NO LINK IS HARMFUL, BUT CHECK ANYWAY!
+
+---------------------------------------------
+FUTURE UPDATES:
+english/portuguese version
+---------------------------------------------
 
 HOW TO USE:
 - the options mostly are the numbers at the beginning of each option
