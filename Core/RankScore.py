@@ -208,8 +208,10 @@ class RankScore:
                         print("|{:^11s}|{:^13s}|{:^11s}|".format(str(first[victory1 - 1]), str(local1[victory1 - 1]), str(valorScore1[victory1 - 1])))
                         print(linha)
                         sleep(.5)
-                        raise ValueError("SCORE TERMINADO - LOADING!\n"+linha)                
-                
+                        raise ValueError("SCORE TERMINADO - LOADING!\n"+linha)         
+                else:
+                    raise ValueError("Não há score suficiente para mostrar!\n"+linha)
+                    sleep(.5)
         except ValueError as e:
             sleep(1)
             print("LOG: -> ", e)
