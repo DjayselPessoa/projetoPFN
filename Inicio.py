@@ -8,8 +8,8 @@ from Data.UpdateScore import ObjUpdateScore
 from Core.RankScore import ObjRankScore
 from csv import writer
 from csv import QUOTE_MINIMAL
-import os
 from time import sleep
+import os
 
 
 active = True
@@ -24,11 +24,11 @@ while active:
         nome = []
         senha = []
         scorename = []
-        alert, cod, nome, senha, scorename = ObjAbrirCSV.abrircsv(pegarDirRaiz)  # abrindo e retornando conteúdo!
+        alert, cod, nome, senha, scorename = ObjAbrirCSV.abrircsv(pegarDirRaiz) # abrindo e retornando conteúdo!
         # print("alert 2", alert)
         if alert == 0:
             print("Olá! Seja bem vindo ao PYTHON FOR NOOBS!")
-            print("Sendo esta a sua primeira entrada")
+            print("Já que esta é a sua primeira entrada")
             print("você precisará criar um profile: -> ")
             alert = ObjCriarProfile.criarprofile(alert, pegarDirRaiz)
             print("GERANDO SCOREFILE!")

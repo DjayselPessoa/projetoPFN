@@ -1,5 +1,7 @@
 # PYTHON FOR NOOBS - [EN-US](https://github.com/DjayselPessoa/projetoPFN/blob/main/README.md#python-for-noobs)
 
+### necessário instalar o Python 3.9.6 em sua máquina! -> https://www.python.org/downloads/release/python-396/
+
 CORRIGIDO OS NOMES DOS ARQUIVOS! PARA INICIAR O PROGRAMA UTILIZE O ARQUIVO Inicio.py
 
 Este é um programa educativo que funciona pelo terminal com o intuito de explicar/ensinar sobre os operadores em Python para os iniciantes na linguagem.
@@ -9,6 +11,11 @@ O tipo de operador 'bit a bit' foi deixado de lado no momento.
 Na parte sobre o programa dentro da execução do programa existem links para sites que foram utilizados como referência QUE ABRIRÃO SEU NAVEGADOR! 
 
 NENHUM LINK É NOCIVO, MAS VERIFIQUE MESMO ASSIM!
+
+---------------------------------------------
+FUTUROS UPDATES:
+versão inglês/português
+---------------------------------------------
 
 COMO USAR:
 - as opções em sua maioria são os números no começo de cada opção
@@ -20,6 +27,9 @@ IMPORTANTE:
 - Essa é a única forma de fazer o programa escrever sempre abaixo da última linha e não na última linha!
 
 Se houver Bugs reportem!
+
+v1.0 update -> 19/01/2022
+- espaços em branco nos nomes não são mais permitidos
 
 v0.9 update -> 15/09/2021
 - Correção do módulo de rank. O atributo tickTack não alternava em certo momento.
@@ -78,6 +88,8 @@ V0.1 update:
 
 # PYTHON FOR NOOBS
 
+### install Python 3.9.6 ->   https://www.python.org/downloads/release/python-396/
+
 FIXED FILE NAMES! TO START THE PROGRAM USE THE FILE Inicio.py
 
 This is an educational program that works through the terminal in order to explain/teach about Python operators for beginners in the language.
@@ -87,6 +99,11 @@ The bitwise operator type has been left out at this time.
 In the part about the program within the program execution there are links to sites that were used as a reference THAT WILL OPEN YOUR BROWSER! 
 
 NO LINK IS HARMFUL, BUT CHECK ANYWAY!
+
+---------------------------------------------
+FUTURE UPDATES:
+english/portuguese version
+---------------------------------------------
 
 HOW TO USE:
 - the options mostly are the numbers at the beginning of each option
@@ -98,6 +115,9 @@ IMPORTANT:
 - That's the only way to make the program always write below the last line and not on the last line!
 
 If there are Bugs report!
+
+v1.0 update -> 01/19/2022
+- blank spaces in names are no longer allowed
 
 v0.9 update -> 15/09/2021
 - Fixed rank module. The tickTack attribute did not toggle at one point.
