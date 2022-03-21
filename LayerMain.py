@@ -20,7 +20,7 @@ class LayerMain:
                 print(f"USER: {self.nome} <-> SCORE: {self.score}")
                 print("\nAbaixo estão todos os tipos de operadores menos o bit a bit\nUtilize os números para escolher:\n\n[1] - Operadores Aritméticos\n[2] - Operadores de Atribuição\n[3] - Operadores de Comparação\n[4] - Operadores Lógicos\n[5] - Operadores de Identidade\n[6] - Operadores de Associação\n[7] - Sobre o programa\n[8] - Voltar\n","\n")
                 escolhaOp = str(input("Qual operador deseja estudar: -> "))
-                if escolhaOp not in "12345678":
+                if not escolhaOp in "12345678":
                     raise ValueError("\nDADO INCORRETO - REINICIANDO!")
                 else:
                     sair, self.score, codFinal = ObjEscolha.escolha(escolhaOp, self.score, self.cod)

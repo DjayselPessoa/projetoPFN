@@ -16,13 +16,14 @@ class CriarProfile:
             novoNome = str(input("Informe o primeiro nome -> "))
             novoNome = novoNome.lower()
             # print(novoNome)
-            espaco = " "
             for i in novoNome:
                 # print("Ok")
                 if str(i) == " ":
-                    print("Espaço detectado!")
+                    space += 1
+                    # nomeTratado = nomeTratado + ""
+                if space > 1:
                     sleep(1)
-                    raise ValueError("- O nome não deve conter espaço -\nREINICIANDO!")
+                    raise ValueError("- Informe o nome sem usar espaço -\nREINICIANDO!")
             else:
                 sleep(1)
                 print("Nome recebido!")
