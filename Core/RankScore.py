@@ -209,7 +209,7 @@ class RankScore:
                         print(linha)
                         sleep(.5)
                         raise ValueError("SCORE TERMINADO - LOADING!\n"+linha)                
-
+                
         except ValueError as e:
             sleep(1)
             print("LOG: -> ", e)
