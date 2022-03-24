@@ -29,6 +29,7 @@ class RankScore:
             evitar1 = str
             evitar2 = str
             active = True
+            scoreUser = []
             # print("rank var")
             if len(self.cod) == 0:
                 sleep(1)
@@ -41,15 +42,18 @@ class RankScore:
                 for i in range(0, len(self.cod)):
                     print(f"i: {i}")
                     # print(f"tt: {tickTack}")
-                    if i == (len(self.cod) + 1):
-                        active = False
+                    if i == (len(self.cod)-1):
+                            active = False
                     # print(f"tt {tickTack}")
-                    if i == (len(self.cod)):
-                        # print(self.cod)
+                    if tickTack == 0:
+                        print(f"self.cod: {self.cod}")
                         nomeScore = "score_"+str(self.cod[i])+".csv"
-                        # print(f"nomeS: {nomeScore}")
+                        print(f"nomeS: {nomeScore}")
                         scoreUser = ObjLerScore.lerscore(nomeScore, self.pegarDirRaiz)
-                        print(f"sUser: {int(scoreUser)}")
+                        print(f"contSUser: {contSUser}")
+                        for w in scoreUser:
+                            print(f"sUser: {scoreUser[contSUser]}")
+                            cont += 1
                         x = int(scoreUser)
                         tickTack = 1
                         if maior1 < x:
@@ -65,6 +69,7 @@ class RankScore:
                         nomeScore = "score_"+self.cod[cont - 1]+".csv"
                         scoreUser = ObjLerScore.lerscore(nomeScore, self.pegarDirRaiz)
                         y = int(scoreUser)
+                        print(f"y: {y}")
                         tickTack = 0
 
                         if maior1 < y:
