@@ -29,27 +29,19 @@ class RankScore:
             evitar1 = str
             evitar2 = str
             active = True
-            # print("rank var")
+
             if len(self.cod) == 0:
                 sleep(1)
                 raise ValueError("SEM REGISTROS VÁLIDOS! REINICIANDO!")
 
             while active:
-                # print("while")
-                # print(len(self.cod))
-                print(f"len cod: {len(self.cod)}")
-                for i in range(0, len(self.cod)):
-                    print(f"i: {i}")
-                    # print(f"tt: {tickTack}")
-                    if i == (len(self.cod) + 1):
+
+                for i in range(len(self.cod)):
+                    if i == (len(self.cod) - 1):
                         active = False
-                    # print(f"tt {tickTack}")
-                    if i == (len(self.cod)):
-                        # print(self.cod)
-                        nomeScore = "score_"+str(self.cod[i])+".csv"
-                        # print(f"nomeS: {nomeScore}")
+                    if tickTack == 0:
+                        nomeScore = "score_"+self.cod[cont - 1]+".csv"
                         scoreUser = ObjLerScore.lerscore(nomeScore, self.pegarDirRaiz)
-                        print(f"sUser: {int(scoreUser)}")
                         x = int(scoreUser)
                         tickTack = 1
                         if maior1 < x:
@@ -177,11 +169,8 @@ class RankScore:
                 # print(local3)
             else:
                 if victory1 > 0:
-                    print("ok1")
                     if victory2 > 0:
-                        print("ok2")
                         if victory3 > 0:
-                            print("ok3")
                             linha = "-" * 40
                             print(linha)
                             print("|{:^11s}|{:^13s}|{:^11s}|".format("NOME", "ID PESSOAL", "SCORE"))

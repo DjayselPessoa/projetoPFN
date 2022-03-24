@@ -25,7 +25,7 @@ while active:
         senha = []
         scorename = []
         alert, cod, nome, senha, scorename = ObjAbrirCSV.abrircsv(pegarDirRaiz) # abrindo e retornando conteúdo!
-        # print("alert 2: ", alert)
+        # print("alert 2", alert)
         if alert == 0:
             print("Olá! Seja bem vindo ao PYTHON FOR NOOBS!")
             print("Já que esta é a sua primeira entrada")
@@ -110,7 +110,6 @@ while active:
             raise ValueError("\nDESLIGANDO!")
 
         elif entrarCriar in "Rr":
-            print(f"cod: {cod}")
             ObjRankScore.rankscore(cod, pegarDirRaiz, nome)
             sleep(1)
             raise ValueError("\nLOADING - > ")
