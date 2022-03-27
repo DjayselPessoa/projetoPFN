@@ -30,8 +30,9 @@ class RankScore:
             evitar2 = str
             active = True
             scoreUser = []
+            quant = len(self.cod)
             # print("rank var")
-            if len(self.cod) == 0:
+            if quant == 0:
                 sleep(1)
                 raise ValueError("SEM REGISTROS VÁLIDOS! REINICIANDO!")
 
@@ -42,17 +43,17 @@ class RankScore:
                 for i in range(0, len(self.cod)):
                     print(f"i: {i}")
                     # print(f"tt: {tickTack}")
-                    if i == (len(self.cod)-1):
-                            active = False
+                    # if i == (len(self.cod)-1):
+                    #         active = False
                     # print(f"tt {tickTack}")
                     if tickTack == 0:
                         print(f"self.cod: {self.cod}")
                         nomeScore = "score_"+str(self.cod[i])+".csv"
                         print(f"nomeS: {nomeScore}")
                         scoreUser = ObjLerScore.lerscore(nomeScore, self.pegarDirRaiz)
-                        print(f"contSUser: {contSUser}")
+                        print(f"scoreUser: {scoreUser}")
                         for w in scoreUser:
-                            print(f"sUser: {scoreUser[contSUser]}")
+                            print(f"sUser: {w}")
                             cont += 1
                         x = int(scoreUser)
                         tickTack = 1
@@ -66,7 +67,7 @@ class RankScore:
                         cont += 1
                         continue
                     elif tickTack == 1:
-                        nomeScore = "score_"+self.cod[cont - 1]+".csv"
+                        nomeScore = "score_"+self.cod[cont]+".csv"
                         scoreUser = ObjLerScore.lerscore(nomeScore, self.pegarDirRaiz)
                         y = int(scoreUser)
                         print(f"y: {y}")
@@ -226,8 +227,9 @@ class RankScore:
                         sleep(.5)
                         raise ValueError("SCORE TERMINADO - LOADING!\n"+linha)
                 else:
-                    raise ValueError("Não há score para mostrar!\n"+linha)
+                    print(linha)
                     sleep(.5)
+                    raise ValueError("Não há score para mostrar!\n"+linha)
         except ValueError as e:
             sleep(1)
             print("LOG: -> ", e)

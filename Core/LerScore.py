@@ -21,7 +21,7 @@ class LerScore:
                 scoreUser.append(f["SCORE"])
                 print(f"cont2: {cont2} - lista {scoreUser[cont2]}")
                 cont2 += 1
-            mostrar = scoreUser[cont2]
+            mostrar = scoreUser[cont2 - 1]
             print(f'scoreUser: {mostrar}')
             return mostrar
         except ValueError as e:
