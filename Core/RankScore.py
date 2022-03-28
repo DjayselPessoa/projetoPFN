@@ -4,39 +4,36 @@ from time import sleep
 
 class RankScore:
 
-    def rankscore(self, cod, pegarDirRaiz, nome):
+    def rankscore(self, pegarDirRaiz, cod, nome, active):
         try:
-            self.cod = cod
-            self.pegarDirRaiz = pegarDirRaiz
-            self.nome = nome
 
-            cont = 1
-            maior1 = 0
-            maior2 = 0
-            maior3 = 0
+            self.pegarDirRaiz = pegarDirRaiz  # string
+            self.active = active  # boolean
+            self.cod = cod  # lista
+            self.nome = nome  # lista
+
+            cont = 0  # contador
+            nomeCod = {}  # dicionário dos 3 primeiros colocados
+            scoreCod = {}  # dicionário dos 3 valores
+            # -------------------------------------------------------------------------------------------------
+            # variáveis de comparação:
+            # -------------------------------------------------------------------------------------------------
             x = 0
             y = 0
+            z = 0
+            # -------------------------------------------------------------------------------------------------
+            # controle por pulso:
+            # -------------------------------------------------------------------------------------------------
             tickTack = 0
-            local1 = []
-            local2 = []
-            local3 = []
-            valorScore1 = []
-            valorScore2 = []
-            valorScore3 = []
-            first = []
-            second = []
-            third = []
-            evitar1 = str
-            evitar2 = str
-            active = True
-            scoreUser = []
+            # -------------------------------------------------------------------------------------------------
+            scoreUser = [] 
             quant = len(self.cod)
             # print("rank var")
             if quant == 0:
                 sleep(1)
                 raise ValueError("SEM REGISTROS VÁLIDOS! REINICIANDO!")
 
-            while active:
+            while self.active:
                 # print("while")
                 # print(len(self.cod))
                 print(f"len cod: {len(self.cod)}")
@@ -67,7 +64,7 @@ class RankScore:
                         cont += 1
                         continue
                     elif tickTack == 1:
-                        nomeScore = "score_"+self.cod[cont]+".csv"
+                        nomeScore = "score_"+self.cod[i]+".csv"
                         scoreUser = ObjLerScore.lerscore(nomeScore, self.pegarDirRaiz)
                         y = int(scoreUser)
                         print(f"y: {y}")

@@ -18,14 +18,24 @@ while active:
     try:
         os.chdir(os.path.dirname(__file__))
         pegarDirRaiz = str(os.getcwd())
+        # -------------------------------------------------------------------------------------------------
+        # Acima obtem-se o link do diretório atual do programa até este arquivo início.py
         # print("Ok1 ", pegarDirRaiz)
-        alert = 0
+        # -------------------------------------------------------------------------------------------------
+        alert = 0  # variável do primeiro uso
+        # -------------------------------------------------------------------------------------------------
+        # listas de controle e dados abaixo:
+        # -------------------------------------------------------------------------------------------------
         cod = []
         nome = []
         senha = []
         scorename = []
-        alert, cod, nome, senha, scorename = ObjAbrirCSV.abrircsv(pegarDirRaiz) # abrindo e retornando conteúdo!
+        # -------------------------------------------------------------------------------------------------
+        alert, cod, nome, senha, scorename = ObjAbrirCSV.abrircsv(pegarDirRaiz)  # abrindo e retornando conteúdo!
+        # -------------------------------------------------------------------------------------------------
+        # quando não tem nenhum usuário exibe mensagem de boas vindas
         # print("alert 2: ", alert)
+        # -------------------------------------------------------------------------------------------------
         if alert == 0:
             print("Olá! Seja bem vindo ao PYTHON FOR NOOBS!")
             print("Já que esta é a sua primeira entrada")
@@ -47,6 +57,9 @@ while active:
                 filewriter.writerow([novoScore])
             csvfile.close()
 
+        # -------------------------------------------------------------------------------------------------
+        # Quando detectado ao menos um usuário o menu é mostrado
+        # -------------------------------------------------------------------------------------------------
         elif len(cod) != 0 or alert == 1:
             print("\nBem vindo ao PYTHON FOR NOOBS!\n\nUtilize as letras iniciais para acessar: ->\n")
             listaExibir = ["Entrar", "Criar", "Sair", "Rank", "[E]", "[C]", "[S]", "[R]"]
@@ -111,7 +124,7 @@ while active:
 
         elif entrarCriar in "Rr":
             print(f"cod: {cod}")
-            ObjRankScore.rankscore(cod, pegarDirRaiz, nome)
+            ObjRankScore.rankscore(pegarDirRaiz, cod, nome, active)
             sleep(1)
             raise ValueError("\nLOADING - > ")
 
