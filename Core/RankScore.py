@@ -38,10 +38,11 @@ class RankScore:
             while self.active:
 
                 for i in range(len(self.cod)):
-                    if i == (len(self.cod) - 1):
-                        active = False
+                    if i == len(self.cod):
+                        self.active = False
+
                     if tickTack == 0:
-                        nomeScore = "score_"+self.cod[cont]+".csv"
+                        nomeScore = "score_"+self.cod[cont - 1]+".csv"
                         scoreUser = ObjLerScore.lerscore(nomeScore, self.pegarDirRaiz)
                         x = int(scoreUser)
                         tickTack = 1
@@ -55,7 +56,7 @@ class RankScore:
                         cont += 1
                         continue
                     elif tickTack == 1:
-                        nomeScore = "score_"+self.cod[cont]+".csv"
+                        nomeScore = "score_"+self.cod[cont - 1]+".csv"
                         scoreUser = ObjLerScore.lerscore(nomeScore, self.pegarDirRaiz)
                         y = int(scoreUser)
                         tickTack = 0
@@ -70,14 +71,14 @@ class RankScore:
                         cont += 1
                         continue
                 victory1 = len(local1)
-                if len(self.cod) - 2 > 0 and active == False:
+                if len(self.cod) - 2 > 0 and self.active == False:
                     cont = 1
                     tickTack = 0
-                    active = True
+                    self.active = True
                     evitar1 = "score_"+local1[len(local1) - 1]+".csv"
                     for i in range(len(self.cod)):
                         if i == (len(self.cod) - 1):
-                            active = False
+                            self.active = False
                         if tickTack == 0:
                             nomeScore = "score_"+self.cod[cont - 1]+".csv"
                             if nomeScore == evitar1:
@@ -116,18 +117,18 @@ class RankScore:
                             cont += 1
                             continue
                 victory2 = len(local2)
-                if len(cod) - 3 > 0 and active == False:
+                if len(self.cod) - 3 > 0 and self.active == False:
                     cont = 1
                     tickTack = 0
-                    active = True
-                    evitar1 = "score_"+local1[len(local1) - 1]+".csv"
-                    evitar2 = "score_"+local2[len(local2) - 1]+".csv"
+                    self.active = True
+                    evitar1 = "score_"+local1[len(local1)]+".csv"
+                    evitar2 = "score_"+local2[len(local2)]+".csv"
                     # print(local2)
                     for i in range(len(self.cod)):
-                        if i == (len(self.cod) - 1):
-                            active = False
+                        if i == len(self.cod):
+                            self.active = False
                         if tickTack == 0:
-                            nomeScore = "score_"+self.cod[cont - 1]+".csv"
+                            nomeScore = "score_"+self.cod[cont]+".csv"
                             if nomeScore == evitar1 or nomeScore == evitar2:
                                 tickTack = 1
                                 cont += 1
@@ -139,15 +140,15 @@ class RankScore:
                             if maior3 < x:
                                 maior3 = x
                                 # print(maior3)
-                                local3.append(self.cod[cont - 1])
+                                local3.append(self.cod[cont])
                                 valorScore3.append(x)
-                                third.append(self.nome[cont - 1])
+                                third.append(self.nome[cont])
                                 cont += 1
                                 continue
                             cont += 1
                             continue
                         elif tickTack == 1:
-                            nomeScore = "score_"+self.cod[cont - 1]+".csv"
+                            nomeScore = "score_"+self.cod[cont]+".csv"
                             if nomeScore == evitar1 or nomeScore == evitar2:
                                 tickTack = 0
                                 cont += 1
@@ -158,9 +159,9 @@ class RankScore:
 
                             if maior3 < y:
                                 maior3 = y
-                                local3.append(self.cod[cont - 1])
+                                local3.append(self.cod[cont])
                                 valorScore3.append(y)
-                                third.append(self.nome[cont - 1])
+                                third.append(self.nome[cont])
                                 cont += 1
                                 continue
                             cont += 1
