@@ -126,9 +126,9 @@ while active:
             print(f"cod: {cod}")
             ObjRankScore.rankscore(pegarDirRaiz, cod, nome, active)
             sleep(1)
-            raise ValueError("\nLOADING - > ")
+            ValueError("\nLOADING - > ")
 
     except ValueError as e:
-        raise ValueError("\nLOG: ->", e)
+        print("\nLOG: ->", e)
     finally:
         continue
