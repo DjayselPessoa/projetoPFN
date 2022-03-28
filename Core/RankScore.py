@@ -19,7 +19,7 @@ class RankScore:
         # -------------------------------------------------------------------------------------------------
 
         linha = "-" * 40
-        scoreUser = 0
+        scoreUser = 100
         scoreAll = {}
         nomeAll = {}
         # print("rank var")
@@ -28,14 +28,22 @@ class RankScore:
             try:
                 # print(len(self.cod))
                 print(f"len lista cod: {len(self.cod)}")
+                if len(self.cod) == 0:
+                    self.active = False
+                    print(linha)
+                    raise ValueError("Sem registros válidos!")
+
                 if len(self.cod) == 1:
-                    nomeScore = "score_"+str(self.cod[0])+".csv"
+                    nomeScore = "score_"+str(self.cod[cont])+".csv"
                     print(f"nomeScore completo: {nomeScore}")
                     scoreUser = ObjLerScore.lerscore(nomeScore, self.pegarDirRaiz)
-                    print(f"scoreUser retornado: {scoreUser}")
+                    print(f"scoreUser retornado: {scoreUser} !!")
+
                     if scoreUser == 0:
                         self.active = False
-                        raise ValueError("Score Zero não são mostrados!\nREINICIANDO")
+                        print(linha)
+                        raise ValueError("Sem registros válidos!")
+
                     else:
                         print(linha)
                         print("|{:^11s}|{:^13s}|{:^11s}|".format("NOME", "ID PESSOAL", "SCORE"))
@@ -59,10 +67,8 @@ class RankScore:
                             cont += 1
                         for x in scoreAll:
                             print(x)
-
             except ValueError as e:
-                sleep(1)
-                print("\nLOG: -> ", str(e))
+                print("LOG : -> ", e)
 
 
 ObjRankScore = RankScore()
