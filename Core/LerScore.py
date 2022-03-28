@@ -6,7 +6,6 @@ class LerScore:
 
     def lerscore(self, nomeScore, pegarDirRaiz):
         try:
-
             self.pegarDirRaiz = pegarDirRaiz
             self.nomeScore = nomeScore
             nomeArquivoSCORE = str(self.nomeScore)
@@ -24,5 +23,8 @@ class LerScore:
             return ultimoScoreUser
         except ValueError as e:
             print("LOG: -> LerScoreErro", e)
+            ultimoScoreUser = 0
+            return ultimoScoreUser
+
 
 ObjLerScore = LerScore()
