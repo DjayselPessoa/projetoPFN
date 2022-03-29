@@ -19,7 +19,7 @@ class LerScore:
             for f in objetoScore:
                 valorScoreUser.append(int(f["SCORE"]))
             ultimoScoreUser = int(valorScoreUser[-1])  # obtendo ultimo valor do score lido
-            print(f'ultimo valor de score do usuário: {ultimoScoreUser}')
+            # print(f'ultimo valor de score do usuário: {ultimoScoreUser} de nome: {self.nomeScore}')
             return ultimoScoreUser
         except ValueError as e:
             print("LOG: -> LerScoreErro", e)

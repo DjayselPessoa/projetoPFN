@@ -123,7 +123,7 @@ while active:
             raise ValueError("\nDESLIGANDO!")
 
         elif entrarCriar in "Rr":
-            print(f"cod: {cod}")
+            # print(f"cod: {cod}")
             ObjRankScore.rankscore(pegarDirRaiz, cod, nome, active)
             sleep(1)
             raise ValueError("\nLOADING - > ")
