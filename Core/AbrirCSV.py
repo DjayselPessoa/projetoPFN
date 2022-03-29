@@ -24,7 +24,7 @@ class AbrirCSV:
             scorename.append(d["SCORENAME"])
 
         alertCod = len(cod)
-        # print("cod -> ", len(cod))
+        # print("quantidade cod abrirCSV -> ", len(cod))
         # print("type -> ", type(len(cod)))
         return alertCod, cod, nome, senha, scorename
 
