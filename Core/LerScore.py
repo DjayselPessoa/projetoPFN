@@ -26,5 +26,4 @@ class LerScore:
             ultimoScoreUser = 0
             return ultimoScoreUser
 
-
 ObjLerScore = LerScore()
