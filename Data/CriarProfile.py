@@ -8,27 +8,37 @@ class CriarProfile:
             self.pegarDirRaiz = pegarDirRaiz
             self.alert = alert
             fim = 0
-            space = 0
+
             novoCod = "#" + str(int(self.alert) + 1)
             novoScoreName = "score_"+novoCod+".csv"
-            nomeTratado = str
+            nomeTratado = ""
             sleep(1)
-            novoNome = str(input("Informe o primeiro nome -> "))
+            novoNome = str(input("Informe seu nome -> "))
+            print("nome não tratado: ", novoNome)
             novoNome = novoNome.lower()
+            novoNome = novoNome.lstrip(' ')
+            novoNome = novoNome.rstrip(' ')
+            novoNome = str(novoNome.replace(" ", "_"))
+            print(f"nome tratado: \n{novoNome}")
+
             # print(novoNome)
-            espaco = " "
+            cont01 = 0
+            nomeProcess = ""
             for i in novoNome:
                 # print("Ok")
-                if str(i) == " ":
-                    print("Espaço detectado!")
+                nomeProcess = nomeProcess + str(i)
+                if cont01 == 10:
+                    print(f"Processando nome -> {nomeProcess}")
                     sleep(1)
-                    raise ValueError("- O nome não deve conter espaço -\nREINICIANDO!")
-            else:
-                sleep(1)
-                print("Nome recebido!")
-                nomeTratado = novoNome
+                    print("- 10 caracteres salvos -")
+                    novoNome = nomeProcess
+                    break
+                cont01 += 1
+            sleep(0.5)
+            print("Nome recebido e devidamente processado!")
+            nomeTratado = novoNome
             sleep(1)
-            novaSenha = str(input("Informe a senha -  6 digitos somente de números -> "))
+            novaSenha = str(input("Informe a senha -  6 digitos somente números -> "))
             if 6 <= len(novaSenha) <= 6:
                 for i in novaSenha:
                     if i in "0123456789":
