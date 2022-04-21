@@ -1,4 +1,6 @@
 from pathlib import Path
+from os.path import exists
+from csv import writer
 import csv
 
 
@@ -16,12 +18,23 @@ class AbrirCSV:
         sourcePath = Path(home, "Data", "SAVE.csv")
         sourcePath = str(sourcePath)
         # print("ok3", sourcePath)
-
-        for d in csv.DictReader(open(sourcePath), delimiter=','):
-            cod.append(d["COD"])
-            nome.append(d["NOME"])
-            senha.append(d["SENHA"])
-            scorename.append(d["SCORENAME"])
+        if (exists(sourcePath)):
+            for d in csv.DictReader(open(sourcePath), delimiter=','):
+                cod.append(d["COD"])
+                nome.append(d["NOME"])
+                senha.append(d["SENHA"])
+                scorename.append(d["SCORENAME"])
+        else:
+            with open(sourcePath, 'a+', newline='') as saveAgain:
+                forma = [("COD"), ("NOME"), ("SENHA"), ("SCORENAME")]
+                sA = writer(saveAgain)
+                sA.writerow(forma)
+            saveAgain.close()
+            for d in csv.DictReader(open(sourcePath), delimiter=','):
+                cod.append(d["COD"])
+                nome.append(d["NOME"])
+                senha.append(d["SENHA"])
+                scorename.append(d["SCORENAME"])
 
         alertCod = len(cod)
         # print("quantidade cod abrirCSV -> ", len(cod))
