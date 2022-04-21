@@ -30,6 +30,7 @@ class AbrirCSV:
                 sA = writer(saveAgain)
                 sA.writerow(forma)
             saveAgain.close()
+            print("LOG -> Arquivo save foi recriado!\n")
             for d in csv.DictReader(open(sourcePath), delimiter=','):
                 cod.append(d["COD"])
                 nome.append(d["NOME"])
