@@ -11,6 +11,8 @@ from csv import QUOTE_MINIMAL
 from time import sleep
 import os
 
+from Layout.views import barra_progresso
+
 # -------------------------------------------------------------------------------------------------
 # Inicializando
 # -------------------------------------------------------------------------------------------------
@@ -25,6 +27,14 @@ while active:
         pegarDirRaiz = str(os.getcwd())
         sizeTerminal = os.get_terminal_size()
         print("Tamanho do terminal: ", sizeTerminal)
+        #-----------------------------------------------------------------------------------------
+        # Chama a barra de progresso
+        print(" \n")
+        print("                       CARREGANDO \n")
+        barra_progresso(0.02)
+        print(" \n")
+        print("                       CONCLUÍDO \n")
+        print(" \n")
         # print("Ok1 ", pegarDirRaiz)
         # -------------------------------------------------------------------------------------------------
         # variável de detecção
