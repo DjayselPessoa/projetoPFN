@@ -8,22 +8,24 @@ class LerScore:
         try:
             self.pegarDirRaiz = pegarDirRaiz
             self.nomeScore = nomeScore
+            # print(f"self.nomeScore: {self.nomeScore}")
+            scoreUser = []
             nomeArquivoSCORE = str(self.nomeScore)
             # print(f"nomeArquivoSCORE: {nomeArquivoSCORE}")
             home = Path(self.pegarDirRaiz)
             sourcePath = Path(home, "Data", nomeArquivoSCORE)
-            # print(f"path completo: {sourcePath}")
-            valorScoreUser = []
-            #  Obtendo dados
-            objetoScore = csv.DictReader(open(sourcePath), delimiter='\n')
+            # print(sourcePath)
+            cont2 = 0
+            objetoScore = csv.DictReader(open(sourcePath), delimiter=',')
             for f in objetoScore:
-                valorScoreUser.append(int(f["SCORE"]))
-            ultimoScoreUser = int(valorScoreUser[-1])  # obtendo ultimo valor do score lido
-            # print(f'ultimo valor de score do usuário: {ultimoScoreUser} de nome: {self.nomeScore}')
-            return ultimoScoreUser
+                scoreUser.append(f["SCORE"])
+                print(f"cont2: {cont2} - lista {scoreUser[cont2]}")
+                cont2 += 1
+            mostrar = scoreUser[cont2]
+            print(f'scoreUser: {mostrar}')
+            return mostrar
         except ValueError as e:
-            print("LOG: -> LerScoreErro", e)
-            ultimoScoreUser = 0
-            return ultimoScoreUser
+            print("LOG ->", e)
+
 
 ObjLerScore = LerScore()
