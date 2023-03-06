@@ -23,29 +23,23 @@ while active:
         # Obtenção do caminho do diretório "atual do programa" até o arquivo início.py (main.py)
         os.chdir(os.path.dirname(__file__))
         pegarDirRaiz = str(os.getcwd())
-
-        # -------------------------------------------------------------------------------------------------
-        # Acima obtem-se o link do diretório atual do programa até este arquivo início.py
-        # print("Ok1 ", pegarDirRaiz)
-        # -------------------------------------------------------------------------------------------------
         sizeTerminal = os.get_terminal_size()
         print("Tamanho do terminal: ", sizeTerminal)
+        # print("Ok1 ", pegarDirRaiz)
         # -------------------------------------------------------------------------------------------------
-        alert = 0  # variável do primeiro uso
+        # variável de detecção
+        alert = 0
         # -------------------------------------------------------------------------------------------------
-        # listas de controle e dados abaixo:
-        # -------------------------------------------------------------------------------------------------
-       
+        # listas de dados para controle de acessos:
         cod = []
         nome = []
         senha = []
         scorename = []
         # -------------------------------------------------------------------------------------------------
-        alert, cod, nome, senha, scorename = ObjAbrirCSV.abrircsv(pegarDirRaiz)  # abrindo e retornando conteúdo!
-        # -------------------------------------------------------------------------------------------------
-        # quando não tem nenhum usuário exibe mensagem de boas vindas
-        # print("alert 2: ", alert)
-
+        # abrindo e retornando conteúdo:
+        alert, cod, nome, senha, scorename = ObjAbrirCSV.abrircsv(pegarDirRaiz)
+        # quando não tem nenhum usuário exibe mensagem de boas vindas (alert)
+        # print("alert detection: ", alert)
         # -------------------------------------------------------------------------------------------------
         if alert == 0:
             print("Olá! Seja bem vindo ao PYTHON FOR NOOBS!")
