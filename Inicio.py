@@ -23,23 +23,29 @@ while active:
         # Obtenção do caminho do diretório "atual do programa" até o arquivo início.py (main.py)
         os.chdir(os.path.dirname(__file__))
         pegarDirRaiz = str(os.getcwd())
-        sizeTerminal = os.get_terminal_size()
-        print("Tamanho do terminal: ", sizeTerminal)
+
+        # -------------------------------------------------------------------------------------------------
+        # Acima obtem-se o link do diretório atual do programa até este arquivo início.py
         # print("Ok1 ", pegarDirRaiz)
         # -------------------------------------------------------------------------------------------------
-        # variável de detecção
-        alert = 0
+        sizeTerminal = os.get_terminal_size()
+        print("Tamanho do terminal: ", sizeTerminal)
         # -------------------------------------------------------------------------------------------------
-        # listas de dados para controle de acessos:
+        alert = 0  # variável do primeiro uso
+        # -------------------------------------------------------------------------------------------------
+        # listas de controle e dados abaixo:
+        # -------------------------------------------------------------------------------------------------
+       
         cod = []
         nome = []
         senha = []
         scorename = []
         # -------------------------------------------------------------------------------------------------
-        # abrindo e retornando conteúdo:
-        alert, cod, nome, senha, scorename = ObjAbrirCSV.abrircsv(pegarDirRaiz)
-        # quando não tem nenhum usuário exibe mensagem de boas vindas (alert)
-        # print("alert detection: ", alert)
+        alert, cod, nome, senha, scorename = ObjAbrirCSV.abrircsv(pegarDirRaiz)  # abrindo e retornando conteúdo!
+        # -------------------------------------------------------------------------------------------------
+        # quando não tem nenhum usuário exibe mensagem de boas vindas
+        # print("alert 2: ", alert)
+
         # -------------------------------------------------------------------------------------------------
         if alert == 0:
             print("Olá! Seja bem vindo ao PYTHON FOR NOOBS!")
