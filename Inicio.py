@@ -11,21 +11,31 @@ from csv import QUOTE_MINIMAL
 from time import sleep
 import os
 
+# -------------------------------------------------------------------------------------------------
+# Inicializando
+# -------------------------------------------------------------------------------------------------
 
 active = True
 
 while active:
     try:
+        # -------------------------------------------------------------------------------------------------
+        # Obtenção do caminho do diretório "atual do programa" até o arquivo início.py (main.py)
         os.chdir(os.path.dirname(__file__))
         pegarDirRaiz = str(os.getcwd())
+
         # -------------------------------------------------------------------------------------------------
         # Acima obtem-se o link do diretório atual do programa até este arquivo início.py
         # print("Ok1 ", pegarDirRaiz)
+        # -------------------------------------------------------------------------------------------------
+        sizeTerminal = os.get_terminal_size()
+        print("Tamanho do terminal: ", sizeTerminal)
         # -------------------------------------------------------------------------------------------------
         alert = 0  # variável do primeiro uso
         # -------------------------------------------------------------------------------------------------
         # listas de controle e dados abaixo:
         # -------------------------------------------------------------------------------------------------
+       
         cod = []
         nome = []
         senha = []
@@ -35,6 +45,7 @@ while active:
         # -------------------------------------------------------------------------------------------------
         # quando não tem nenhum usuário exibe mensagem de boas vindas
         # print("alert 2: ", alert)
+
         # -------------------------------------------------------------------------------------------------
         if alert == 0:
             print("Olá! Seja bem vindo ao PYTHON FOR NOOBS!")
