@@ -29,31 +29,19 @@ class RankScore:
             evitar1 = str
             evitar2 = str
             active = True
-            scoreUser = []
-            # print("rank var")
+
             if len(self.cod) == 0:
                 sleep(1)
                 raise ValueError("SEM REGISTROS VÁLIDOS! REINICIANDO!")
 
             while active:
-                # print("while")
-                # print(len(self.cod))
-                print(f"len cod: {len(self.cod)}")
-                for i in range(0, len(self.cod)):
-                    print(f"i: {i}")
-                    # print(f"tt: {tickTack}")
-                    if i == (len(self.cod)-1):
-                            active = False
-                    # print(f"tt {tickTack}")
+
+                for i in range(len(self.cod)):
+                    if i == (len(self.cod) - 1):
+                        active = False
                     if tickTack == 0:
-                        print(f"self.cod: {self.cod}")
-                        nomeScore = "score_"+str(self.cod[i])+".csv"
-                        print(f"nomeS: {nomeScore}")
+                        nomeScore = "score_"+self.cod[cont - 1]+".csv"
                         scoreUser = ObjLerScore.lerscore(nomeScore, self.pegarDirRaiz)
-                        print(f"contSUser: {contSUser}")
-                        for w in scoreUser:
-                            print(f"sUser: {scoreUser[contSUser]}")
-                            cont += 1
                         x = int(scoreUser)
                         tickTack = 1
                         if maior1 < x:
@@ -69,7 +57,6 @@ class RankScore:
                         nomeScore = "score_"+self.cod[cont - 1]+".csv"
                         scoreUser = ObjLerScore.lerscore(nomeScore, self.pegarDirRaiz)
                         y = int(scoreUser)
-                        print(f"y: {y}")
                         tickTack = 0
 
                         if maior1 < y:
@@ -182,11 +169,8 @@ class RankScore:
                 # print(local3)
             else:
                 if victory1 > 0:
-                    print("ok1")
                     if victory2 > 0:
-                        print("ok2")
                         if victory3 > 0:
-                            print("ok3")
                             linha = "-" * 40
                             print(linha)
                             print("|{:^11s}|{:^13s}|{:^11s}|".format("NOME", "ID PESSOAL", "SCORE"))
@@ -224,9 +208,9 @@ class RankScore:
                         print("|{:^11s}|{:^13s}|{:^11s}|".format(str(first[victory1 - 1]), str(local1[victory1 - 1]), str(valorScore1[victory1 - 1])))
                         print(linha)
                         sleep(.5)
-                        raise ValueError("SCORE TERMINADO - LOADING!\n"+linha)
+                        raise ValueError("SCORE TERMINADO - LOADING!\n"+linha)         
                 else:
-                    raise ValueError("Não há score para mostrar!\n"+linha)
+                    raise ValueError("Não há score suficiente para mostrar!\n"+linha)
                     sleep(.5)
         except ValueError as e:
             sleep(1)
