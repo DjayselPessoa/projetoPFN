@@ -11,36 +11,25 @@ from csv import QUOTE_MINIMAL
 from time import sleep
 import os
 
-# -------------------------------------------------------------------------------------------------
-# Inicializando
-# -------------------------------------------------------------------------------------------------
 
 active = True
 
 while active:
     try:
-        # -------------------------------------------------------------------------------------------------
-        # Obtenção do caminho do diretório "atual do programa" até o arquivo início.py (main.py)
         os.chdir(os.path.dirname(__file__))
         pegarDirRaiz = str(os.getcwd())
-        sizeTerminal = os.get_terminal_size()
-        print("Tamanho do terminal: ", sizeTerminal)
         # print("Ok1 ", pegarDirRaiz)
-        # -------------------------------------------------------------------------------------------------
-        # variável de detecção
+        # ------------------------------------------------------------------------------------
+        # sizeTerminal = os.get_terminal_size()
+        # print("Tamanho do terminal: ", sizeTerminal)
+        # ------------------------------------------------------------------------------------
         alert = 0
-        # -------------------------------------------------------------------------------------------------
-        # listas de dados para controle de acessos:
         cod = []
         nome = []
         senha = []
         scorename = []
-        # -------------------------------------------------------------------------------------------------
-        # abrindo e retornando conteúdo:
-        alert, cod, nome, senha, scorename = ObjAbrirCSV.abrircsv(pegarDirRaiz)
-        # quando não tem nenhum usuário exibe mensagem de boas vindas (alert)
-        # print("alert detection: ", alert)
-        # -------------------------------------------------------------------------------------------------
+        alert, cod, nome, senha, scorename = ObjAbrirCSV.abrircsv(pegarDirRaiz) # abrindo e retornando conteúdo!
+        # print("alert 2", alert)
         if alert == 0:
             print("Olá! Seja bem vindo ao PYTHON FOR NOOBS!")
             print("Já que esta é a sua primeira entrada")
@@ -62,9 +51,6 @@ while active:
                 filewriter.writerow([novoScore])
             csvfile.close()
 
-        # -------------------------------------------------------------------------------------------------
-        # Quando detectado ao menos um usuário o menu é mostrado
-        # -------------------------------------------------------------------------------------------------
         elif len(cod) != 0 or alert == 1:
             print("\nBem vindo ao PYTHON FOR NOOBS!\n\nUtilize as letras iniciais para acessar: ->\n")
             listaExibir = ["Entrar", "Criar", "Sair", "Rank", "[E]", "[C]", "[S]", "[R]"]
@@ -128,12 +114,13 @@ while active:
             raise ValueError("\nDESLIGANDO!")
 
         elif entrarCriar in "Rr":
-            # print(f"cod: {cod}")
-            ObjRankScore.rankscore(pegarDirRaiz, cod, nome, active)
+            ObjRankScore.rankscore(cod, pegarDirRaiz, nome)
             sleep(1)
             raise ValueError("\nLOADING - > ")
 
     except ValueError as e:
-        print("\nLOG: ->", e)
+        raise ValueError("\nLOG: ->", e)
     finally:
         continue
+        
+        
