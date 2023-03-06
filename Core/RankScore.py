@@ -4,11 +4,12 @@ from time import sleep
 
 class RankScore:
 
-    def rankscore(self, cod, pegarDirRaiz, nome):
+    def rankscore(self, pegarDirRaiz, cod, nome, active):
         try:
             self.cod = cod
             self.pegarDirRaiz = pegarDirRaiz
             self.nome = nome
+            self.active = active
 
             cont = 1
             maior1 = 0
@@ -28,17 +29,16 @@ class RankScore:
             third = []
             evitar1 = str
             evitar2 = str
-            active = True
 
             if len(self.cod) == 0:
                 sleep(1)
                 raise ValueError("SEM REGISTROS VÁLIDOS! REINICIANDO!")
 
-            while active:
+            while self.active:
 
                 for i in range(len(self.cod)):
                     if i == (len(self.cod) - 1):
-                        active = False
+                        self.active = False
                     if tickTack == 0:
                         nomeScore = "score_"+self.cod[cont - 1]+".csv"
                         scoreUser = ObjLerScore.lerscore(nomeScore, self.pegarDirRaiz)
@@ -69,14 +69,14 @@ class RankScore:
                         cont += 1
                         continue
                 victory1 = len(local1)
-                if len(cod) - 2 > 0 and active == False:
+                if len(self.cod) - 2 > 0 and self.active is False:
                     cont = 1
                     tickTack = 0
-                    active = True
+                    self.active = True
                     evitar1 = "score_"+local1[len(local1) - 1]+".csv"
                     for i in range(len(self.cod)):
                         if i == (len(self.cod) - 1):
-                            active = False
+                            self.active = False
                         if tickTack == 0:
                             nomeScore = "score_"+self.cod[cont - 1]+".csv"
                             if nomeScore == evitar1:
@@ -115,16 +115,16 @@ class RankScore:
                             cont += 1
                             continue
                 victory2 = len(local2)
-                if len(cod) - 3 > 0 and active == False:
+                if len(self.cod) - 3 > 0 and self.active is False:
                     cont = 1
                     tickTack = 0
-                    active = True
+                    self.active = True
                     evitar1 = "score_"+local1[len(local1) - 1]+".csv"
                     evitar2 = "score_"+local2[len(local2) - 1]+".csv"
                     # print(local2)
                     for i in range(len(self.cod)):
                         if i == (len(self.cod) - 1):
-                            active = False
+                            self.active = False
                         if tickTack == 0:
                             nomeScore = "score_"+self.cod[cont - 1]+".csv"
                             if nomeScore == evitar1 or nomeScore == evitar2:
@@ -208,10 +208,12 @@ class RankScore:
                         print("|{:^11s}|{:^13s}|{:^11s}|".format(str(first[victory1 - 1]), str(local1[victory1 - 1]), str(valorScore1[victory1 - 1])))
                         print(linha)
                         sleep(.5)
-                        raise ValueError("SCORE TERMINADO - LOADING!\n"+linha)         
+                        raise ValueError("SCORE TERMINADO - LOADING!\n"+linha)
                 else:
-                    raise ValueError("Não há score suficiente para mostrar!\n"+linha)
-                    sleep(.5)
+                    linha = "-" * 40
+                    print(linha)
+                    print("|{:^11s}|{:^13s}|{:^11s}|".format("", "SCORE ZERO", ""))
+                    print(linha)
         except ValueError as e:
             sleep(1)
             print("LOG: -> ", e)
