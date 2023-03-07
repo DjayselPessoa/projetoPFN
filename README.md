@@ -14,11 +14,11 @@ NENHUM LINK É NOCIVO, MAS VERIFIQUE MESMO ASSIM!
 
 ---------------------------------------------
 FUTUROS UPDATES:
-versão inglês/português
-correção de tratamento de texto inserido
-verificação dos textos das questões.
-alterar opção de voltar para usar letra ao invés de número.
-disposição das informações na tela do console -  organização
+- versão inglês/português
+- correção de tratamento de texto inserido
+- verificação dos textos das questões.
+- alterar opção de voltar para usar letra ao invés de número.
+- disposição das informações na tela do console | organização
 ---------------------------------------------
 
 COMO USAR:
@@ -109,11 +109,11 @@ NO LINK IS HARMFUL, BUT CHECK ANYWAY!
 
 ---------------------------------------------
 FUTURE UPDATES:
-english/portuguese version
-insert text handling correction
-verification of the texts of the questions.
-change option back to using letter instead of number.
-arrangement of information on the console screen - organization
+- english/portuguese version
+- insert text handling correction
+- verification of the texts of the questions.
+- change option back to using letter instead of number.
+- arrangement of information on the console screen | organization
 ---------------------------------------------
 
 HOW TO USE:
