@@ -1,6 +1,6 @@
 # PYTHON FOR NOOBS - [EN-US](https://github.com/DjayselPessoa/projetoPFN/blob/main/README.md#python-for-noobs)
 
-### necessário instalar o Python 3.9.6 em sua máquina! -> https://www.python.org/downloads/release/python-396/
+### versão atual do projeto: Python 3.10.3! -> https://www.python.org/downloads/
 
 CORRIGIDO OS NOMES DOS ARQUIVOS! PARA INICIAR O PROGRAMA UTILIZE O ARQUIVO Inicio.py
 
@@ -95,7 +95,7 @@ V0.1 update:
 
 # PYTHON FOR NOOBS
 
-### install Python 3.9.6 ->   https://www.python.org/downloads/release/python-396/
+### Current project version: Python 3.10.3! ->   https://www.python.org/downloads/
 
 FIXED FILE NAMES! TO START THE PROGRAM USE THE FILE Inicio.py
 
