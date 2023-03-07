@@ -15,6 +15,10 @@ NENHUM LINK É NOCIVO, MAS VERIFIQUE MESMO ASSIM!
 ---------------------------------------------
 FUTUROS UPDATES:
 versão inglês/português
+correção de tratamento de texto inserido
+verificação dos textos das questões.
+alterar opção de voltar para usar letra ao invés de número.
+disposição das informações na tela do console -  organização
 ---------------------------------------------
 
 COMO USAR:
@@ -27,6 +31,9 @@ IMPORTANTE:
 - Essa é a única forma de fazer o programa escrever sempre abaixo da última linha e não na última linha!
 
 Se houver Bugs reportem!
+
+v1.5 update -> 07/03/2023
+- Realizado a correção do sistema de Rank.
 
 v1.0 update -> 19/01/2022
 - espaços em branco nos nomes não são mais permitidos
@@ -103,6 +110,10 @@ NO LINK IS HARMFUL, BUT CHECK ANYWAY!
 ---------------------------------------------
 FUTURE UPDATES:
 english/portuguese version
+insert text handling correction
+verification of the texts of the questions.
+change option back to using letter instead of number.
+arrangement of information on the console screen - organization
 ---------------------------------------------
 
 HOW TO USE:
@@ -115,6 +126,9 @@ IMPORTANT:
 - That's the only way to make the program always write below the last line and not on the last line!
 
 If there are Bugs report!
+
+v1.5 update -> 03/07/2023
+- Performed the correction of the Rank system.
 
 v1.0 update -> 01/19/2022
 - blank spaces in names are no longer allowed
