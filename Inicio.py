@@ -28,14 +28,13 @@ while active:
         # Acima obtem-se o link do diretório atual do programa até este arquivo início.py
         # print("Ok1 ", pegarDirRaiz)
         # -------------------------------------------------------------------------------------------------
-        sizeTerminal = os.get_terminal_size()
-        print("Tamanho do terminal: ", sizeTerminal)
+        # sizeTerminal = os.get_terminal_size("columns")
+        # print("Tamanho do terminal: ", sizeTerminal)
         # -------------------------------------------------------------------------------------------------
         alert = 0  # variável do primeiro uso
         # -------------------------------------------------------------------------------------------------
         # listas de controle e dados abaixo:
         # -------------------------------------------------------------------------------------------------
-       
         cod = []
         nome = []
         senha = []

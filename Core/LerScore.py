@@ -9,10 +9,10 @@ class LerScore:
         self.nomeScore = nomeScore
 
         scoreUser = []
-        nomeArquivoSCORE = self. nomeScore
+        nomeArquivoSCORE = self.nomeScore
         home = Path(self.pegarDirRaiz)
         sourcePath = Path(home, "Data", nomeArquivoSCORE)
-
+        # verificar se existe 
         for f in csv.DictReader(open(sourcePath), delimiter=','):
             scoreUser.append(f["SCORE"])
 

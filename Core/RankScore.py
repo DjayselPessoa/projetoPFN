@@ -35,12 +35,15 @@ class RankScore:
                 raise ValueError("SEM REGISTROS VÁLIDOS! REINICIANDO!")
 
             while self.active:
-
+                # print(f"código tmh: {len(self.cod)}")
                 for i in range(len(self.cod)):
+                    # print(f"cont 0: {cont}")
+                    # print(f"i: {i}")
                     if i == (len(self.cod) - 1):
                         self.active = False
                     if tickTack == 0:
                         nomeScore = "score_"+self.cod[cont - 1]+".csv"
+                        # print("score name: "+nomeScore)
                         scoreUser = ObjLerScore.lerscore(nomeScore, self.pegarDirRaiz)
                         x = int(scoreUser)
                         tickTack = 1
@@ -50,11 +53,15 @@ class RankScore:
                             valorScore1.append(x)
                             first.append(self.nome[cont - 1])
                             cont += 1
+                            # print(f"cont 1a: {cont}")
                             continue
                         cont += 1
+                        # print(f"cont 1: {cont}")
                         continue
                     elif tickTack == 1:
+                        # print("ok2")
                         nomeScore = "score_"+self.cod[cont - 1]+".csv"
+                        # print("score name: "+nomeScore)
                         scoreUser = ObjLerScore.lerscore(nomeScore, self.pegarDirRaiz)
                         y = int(scoreUser)
                         tickTack = 0
@@ -65,11 +72,14 @@ class RankScore:
                             valorScore1.append(y)
                             first.append(self.nome[cont - 1])
                             cont += 1
+                            # print(f"cont 2a: {cont}")
                             continue
                         cont += 1
+                        # print(f"cont 2: {cont}")
                         continue
                 victory1 = len(local1)
-                if len(self.cod) - 2 > 0 and self.active is False:
+                # print(f"tamaho lista v: {victory1} - cont: {cont}")
+                if len(self.cod) - 2 >= 0 and self.active is False:
                     cont = 1
                     tickTack = 0
                     self.active = True
@@ -115,7 +125,7 @@ class RankScore:
                             cont += 1
                             continue
                 victory2 = len(local2)
-                if len(self.cod) - 3 > 0 and self.active is False:
+                if len(self.cod) - 3 >= 0 and self.active is False:
                     cont = 1
                     tickTack = 0
                     self.active = True
