@@ -1,6 +1,7 @@
 from pathlib import Path
+import sys
 from Core.AbrirCSV import ObjAbrirSCORE
-from LayerMain import ObjLayerMain
+from Layout.MainView import ObjMainView
 from Core.Entrar import ObjEntrar
 from Core.AbrirCSV import ObjAbrirCSV
 from Data.CriarProfile import ObjCriarProfile
@@ -10,6 +11,7 @@ from csv import writer
 from csv import QUOTE_MINIMAL
 from time import sleep
 import os
+import shutil
 
 # -------------------------------------------------------------------------------------------------
 # Inicializando
@@ -28,8 +30,34 @@ while active:
         # Acima obtem-se o link do diretório atual do programa até este arquivo início.py
         # print("Ok1 ", pegarDirRaiz)
         # -------------------------------------------------------------------------------------------------
-        # sizeTerminal = os.get_terminal_size("columns")
-        # print("Tamanho do terminal: ", sizeTerminal)
+        sizeTerminal = shutil.get_terminal_size()
+        sizeTerminalC = sizeTerminal[0]
+        sizeTerminalH = sizeTerminal[1]
+        # print("Tamanho do terminal: ", type(sizeTerminal), sizeTerminal, " | ", sizeTerminalC, " | ", sizeTerminalH)
+        # -------------------------------------------------------------------------------------------------
+        # esolha inicial CMD ou interface
+        # -------------------------------------------------------------------------------------------------
+        listaMenu1 = ["CMD", "Interface", "[C]", "[I]"]
+        print("-"*50)
+        print("-"*21, "SELECT", "-"*21)
+        print("-"*50)
+        for i in range(2):
+            print("{:<9s}{:^7s}{:>34s}".format(listaMenu1[i], listaMenu1[i + 2], "-"*34))
+        print("-"*50)
+        select = (str(input(": -> "))).upper()
+        if select in "Ii":
+            print("- Inicializando interface!")
+            appOnOff = ObjMainView.mainView()
+            if appOnOff is True:
+                sleep(1)
+                print("\nFINALIZANDO APLICAÇÃO!")
+
+                active = False
+                sleep(1)
+                raise ValueError("\nDESLIGANDO!")
+        elif select in "Cc":
+            pass
+
         # -------------------------------------------------------------------------------------------------
         alert = 0  # variável do primeiro uso
         # -------------------------------------------------------------------------------------------------
